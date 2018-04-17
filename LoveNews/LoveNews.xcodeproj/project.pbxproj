@@ -14,6 +14,11 @@
 		BFAA1AAA2085CCDD00B088B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1AA82085CCDD00B088B3 /* LaunchScreen.storyboard */; };
 		BFAA1AB52085CCDD00B088B3 /* LoveNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AB42085CCDD00B088B3 /* LoveNewsTests.swift */; };
 		BFAA1AC02085CCDD00B088B3 /* LoveNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ABF2085CCDD00B088B3 /* LoveNewsUITests.swift */; };
+		BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ACE2085D26C00B088B3 /* LNTabBarController.swift */; };
+		BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */; };
+		BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */; };
+		BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */; };
+		BFAA1ADC2085D4EA00B088B3 /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		BFAA1ABB2085CCDD00B088B3 /* LoveNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA1ABF2085CCDD00B088B3 /* LoveNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveNewsUITests.swift; sourceTree = "<group>"; };
 		BFAA1AC12085CCDD00B088B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAA1ACE2085D26C00B088B3 /* LNTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNTabBarController.swift; sourceTree = "<group>"; };
+		BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMallViewController.swift; sourceTree = "<group>"; };
+		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
+		BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
+		BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,11 @@
 		BFAA1A9E2085CCDC00B088B3 /* LoveNews */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA1AD12085D34800B088B3 /* Homepage */,
+				BFAA1AD22085D35700B088B3 /* Video */,
+				BFAA1AD42085D43A00B088B3 /* Mall */,
+				BFAA1AD32085D36000B088B3 /* PersonalCenter */,
+				BFAA1ACD2085D1F100B088B3 /* Tabbar */,
 				BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */,
 				BFAA1AA12085CCDC00B088B3 /* ViewController.swift */,
 				BFAA1AA32085CCDC00B088B3 /* Main.storyboard */,
@@ -123,6 +138,46 @@
 				BFAA1AC12085CCDD00B088B3 /* Info.plist */,
 			);
 			path = LoveNewsUITests;
+			sourceTree = "<group>";
+		};
+		BFAA1ACD2085D1F100B088B3 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1ACE2085D26C00B088B3 /* LNTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		BFAA1AD12085D34800B088B3 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		BFAA1AD22085D35700B088B3 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		BFAA1AD32085D36000B088B3 /* PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */,
+			);
+			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
+		BFAA1AD42085D43A00B088B3 /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */,
+			);
+			path = Mall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +242,7 @@
 		BFAA1A942085CCDB00B088B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LN;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = ygz;
@@ -256,7 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
+				BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */,
+				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
+				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
+				BFAA1ADC2085D4EA00B088B3 /* LNHomeViewController.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
