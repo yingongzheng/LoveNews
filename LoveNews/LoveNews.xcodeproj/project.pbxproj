@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */; };
 		BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AA12085CCDC00B088B3 /* ViewController.swift */; };
 		BFAA1AA52085CCDC00B088B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1AA32085CCDC00B088B3 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BFAA1A9C2085CCDC00B088B3 /* LoveNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAA1AA12085CCDC00B088B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
 		BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
+		EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27F2BE8D4A89AA56AEC195C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADA004EA0A9B5FFBEBFF9B3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */,
+				EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BFAA1A932085CCDB00B088B3 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +113,8 @@
 				BFAA1AB32085CCDD00B088B3 /* LoveNewsTests */,
 				BFAA1ABE2085CCDD00B088B3 /* LoveNewsUITests */,
 				BFAA1A9D2085CCDC00B088B3 /* Products */,
+				ADA004EA0A9B5FFBEBFF9B3B /* Pods */,
+				27F2BE8D4A89AA56AEC195C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFAA1AC42085CCDD00B088B3 /* Build configuration list for PBXNativeTarget "LoveNews" */;
 			buildPhases = (
+				B89DBD8FACC39066079B7436 /* [CP] Check Pods Manifest.lock */,
 				BFAA1A982085CCDC00B088B3 /* Sources */,
 				BFAA1A992085CCDC00B088B3 /* Frameworks */,
 				BFAA1A9A2085CCDC00B088B3 /* Resources */,
+				36F14FCC4B942CC7B8906B44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +332,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36F14FCC4B942CC7B8906B44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B89DBD8FACC39066079B7436 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoveNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFAA1A982085CCDC00B088B3 /* Sources */ = {
@@ -489,15 +554,13 @@
 		};
 		BFAA1AC52085CCDD00B088B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -507,15 +570,13 @@
 		};
 		BFAA1AC62085CCDD00B088B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,11 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -552,11 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -572,11 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -592,11 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

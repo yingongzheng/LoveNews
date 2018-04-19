@@ -46,8 +46,6 @@ class LNTabBarController: UITabBarController {
         
         let tabItem = UITabBarItem(title: title as String, image: norImg,selectedImage: selImg)
         
-//        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0.0, -5.0)
-        
         let naVc = UINavigationController()
         naVc.tabBarItem = tabItem
         naVc.addChildViewController(childerVC)
