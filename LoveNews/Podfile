@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'LoveNews' do
  pod 'IGListKit', '~> 3.2.0'
+ pod 'Alamofire', '~> 4.7.0'
 end
 
 

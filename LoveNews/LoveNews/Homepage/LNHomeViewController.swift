@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -41,5 +42,20 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.textLabel?.text = arry[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         //测试网络请求
+         getRequest()
+        
+    }
 
+    func getRequest() {
+       let parameters:Dictionary = ["key":"93c921ea8b0348af8e8e7a6a273c41bd"]
+       Alamofire.request( "http://apis.haoservice.com/weather/city", method: .get, parameters: parameters)
+        .responseJSON { response in
+            print("response=\(response)")
+            print("result=\(response.result)")
+            //解析
+        }
+     }
 }
