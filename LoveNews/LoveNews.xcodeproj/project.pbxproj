@@ -19,6 +19,8 @@
 		BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */; };
 		BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */; };
 		BFAA1ADC2085D4EA00B088B3 /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */; };
+		BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */; };
+		BFCE1442208DBCCA003FEB5E /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE1441208DBCCA003FEB5E /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
 		BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
+		BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
+		BFCE1441208DBCCA003FEB5E /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,7 @@
 		BFAA1A9E2085CCDC00B088B3 /* LoveNews */ = {
 			isa = PBXGroup;
 			children = (
+				BFC5B3F92089BEF60040A8D2 /* NetWork */,
 				BFAA1AD12085D34800B088B3 /* Homepage */,
 				BFAA1AD22085D35700B088B3 /* Video */,
 				BFAA1AD42085D43A00B088B3 /* Mall */,
@@ -172,6 +177,8 @@
 		BFAA1AD12085D34800B088B3 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				BFCE1440208DBC9C003FEB5E /* Model */,
+				BFCE143A208DBB8F003FEB5E /* View */,
 				BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */,
 			);
 			path = Homepage;
@@ -199,6 +206,37 @@
 				BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */,
 			);
 			path = Mall;
+			sourceTree = "<group>";
+		};
+		BFC5B3F92089BEF60040A8D2 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		BFCE143A208DBB8F003FEB5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE143B208DBB98003FEB5E /* HomeListCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFCE143B208DBB98003FEB5E /* HomeListCell */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */,
+			);
+			path = HomeListCell;
+			sourceTree = "<group>";
+		};
+		BFCE1440208DBC9C003FEB5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE1441208DBCCA003FEB5E /* MovieModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +376,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,8 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCE1442208DBCCA003FEB5E /* MovieModel.swift in Sources */,
 				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
+				BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */,
 				BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */,
 				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
 				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
