@@ -72,16 +72,14 @@ class HomeListCell: UITableViewCell {
         })
     }
     
-    func setValueForCell(model:MovieModel){
+    func setValueForCell(model:movieModel){
         
-        //定义URL对象
-        let url = URL(string: model.img!)
-        //从网络获取数据流
-        let data = try! Data(contentsOf: url!)
-        //通过数据流初始化图片
-        let newImage = UIImage(data: data)
-        self.coverImageView?.image = newImage
-        
+        Alamofire.download(model.img).responseData { (response ) in
+            if let data = response.result.value {
+                let image = UIImage(data: data)
+                self.coverImageView?.image = image
+            }
+        }
         
         self.titleCn?.text = String(format: "%@%@","电影名:",model.titleCn!)
         self.actorNameLab?.text = model.actorName1
