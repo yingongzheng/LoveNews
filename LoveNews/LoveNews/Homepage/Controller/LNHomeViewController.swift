@@ -16,7 +16,8 @@ import SwiftyJSON
 import AlamofireObjectMapper
 
 class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
+    let CellIdentifierClass = "HomeList"
     var dataArr:Array<movieModel> = []
     lazy var table:UITableView  = {
         let tempTableView = UITableView (frame: self.view.frame)
@@ -25,6 +26,7 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         tempTableView.backgroundColor = UIColor.white
         tempTableView.separatorStyle = .singleLine
         tempTableView.tableFooterView = UIView()
+        tempTableView.register(HomeListCell.self, forCellReuseIdentifier: CellIdentifierClass)
         return tempTableView
     }()
     
@@ -62,14 +64,15 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         let indentifier = "HomeListCell"
         var cell:HomeListCell! = tableView.dequeueReusableCell(withIdentifier: indentifier)as?HomeListCell
         if cell == nil {
-            cell = HomeListCell(style: .default, reuseIdentifier: indentifier)
+         cell =  HomeListCell(style: .default, reuseIdentifier: indentifier)
         }
         cell.setValueForCell(model: dataArr[indexPath.row])
         return cell
     }
     
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.00
+        return 110.00
     }
     
 }

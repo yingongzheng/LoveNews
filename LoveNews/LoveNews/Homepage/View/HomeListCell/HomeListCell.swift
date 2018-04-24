@@ -9,6 +9,7 @@
 import UIKit
 import Masonry
 import Alamofire
+import AlamofireImage
 
 class HomeListCell: UITableViewCell {
 
@@ -73,14 +74,7 @@ class HomeListCell: UITableViewCell {
     }
     
     func setValueForCell(model:movieModel){
-        
-        Alamofire.download(model.img).responseData { (response ) in
-            if let data = response.result.value {
-                let image = UIImage(data: data)
-                self.coverImageView?.image = image
-            }
-        }
-        
+        self.coverImageView?.af_setImage(withURL: URL(string: model.img)!)
         self.titleCn?.text = String(format: "%@%@","电影名:",model.titleCn!)
         self.actorNameLab?.text = model.actorName1
         self.directorNameLab?.text = model.directorName
