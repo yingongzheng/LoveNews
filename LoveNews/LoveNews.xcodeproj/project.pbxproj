@@ -18,9 +18,9 @@
 		BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */; };
 		BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */; };
 		BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */; };
-		BFAA1ADC2085D4EA00B088B3 /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */; };
 		BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */; };
 		BFCE1442208DBCCA003FEB5E /* HotPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */; };
+		BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +59,9 @@
 		BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMallViewController.swift; sourceTree = "<group>"; };
 		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
-		BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
 		BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlayModel.swift; sourceTree = "<group>"; };
+		BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
 		EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,9 +176,9 @@
 		BFAA1AD12085D34800B088B3 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				BFCE144A208F00D3003FEB5E /* Controller */,
 				BFCE1440208DBC9C003FEB5E /* Model */,
 				BFCE143A208DBB8F003FEB5E /* View */,
-				BFAA1ADB2085D4EA00B088B3 /* LNHomeViewController.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -229,6 +229,14 @@
 				BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BFCE144A208F00D3003FEB5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +426,8 @@
 				BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */,
 				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
 				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
-				BFAA1ADC2085D4EA00B088B3 /* LNHomeViewController.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
+				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
