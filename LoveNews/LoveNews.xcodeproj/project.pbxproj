@@ -19,6 +19,7 @@
 		BF9F49CA209424150001F43D /* icon_pull_to_refresh_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9F49C1209424150001F43D /* icon_pull_to_refresh_arrow@2x.png */; };
 		BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49C2209424150001F43D /* ESRefreshFooterAnimator.swift */; };
 		BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49C3209424150001F43D /* ESPullToRefresh+Manager.swift */; };
+		BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49D020945D280001F43D /* LNVideoViewController.swift */; };
 		BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */; };
 		BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AA12085CCDC00B088B3 /* ViewController.swift */; };
 		BFAA1AA72085CCDD00B088B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1AA62085CCDD00B088B3 /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 		BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1ACE2085D26C00B088B3 /* LNTabBarController.swift */; };
 		BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */; };
 		BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */; };
-		BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */; };
 		BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */; };
 		BFCE1442208DBCCA003FEB5E /* HotPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */; };
 		BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */; };
@@ -65,6 +65,7 @@
 		BF9F49C1209424150001F43D /* icon_pull_to_refresh_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pull_to_refresh_arrow@2x.png"; sourceTree = "<group>"; };
 		BF9F49C2209424150001F43D /* ESRefreshFooterAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshFooterAnimator.swift; sourceTree = "<group>"; };
 		BF9F49C3209424150001F43D /* ESPullToRefresh+Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESPullToRefresh+Manager.swift"; sourceTree = "<group>"; };
+		BF9F49D020945D280001F43D /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
 		BFAA1A9C2085CCDC00B088B3 /* LoveNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAA1AA12085CCDC00B088B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		BFAA1ACE2085D26C00B088B3 /* LNTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNTabBarController.swift; sourceTree = "<group>"; };
 		BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMallViewController.swift; sourceTree = "<group>"; };
 		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
-		BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoViewController.swift; sourceTree = "<group>"; };
 		BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlayModel.swift; sourceTree = "<group>"; };
 		BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +180,14 @@
 			path = Animator;
 			sourceTree = "<group>";
 		};
+		BF9F49CF20945CFB0001F43D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F49D020945D280001F43D /* LNVideoViewController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		BFAA1A932085CCDB00B088B3 = {
 			isa = PBXGroup;
 			children = (
@@ -205,11 +213,11 @@
 		BFAA1A9E2085CCDC00B088B3 /* LoveNews */ = {
 			isa = PBXGroup;
 			children = (
-				BF9F49B2209415460001F43D /* Common */,
 				BFAA1AD12085D34800B088B3 /* Homepage */,
-				BFAA1AD22085D35700B088B3 /* Video */,
+				BF9F49CF20945CFB0001F43D /* Video */,
 				BFAA1AD42085D43A00B088B3 /* Mall */,
 				BFAA1AD32085D36000B088B3 /* PersonalCenter */,
+				BF9F49B2209415460001F43D /* Common */,
 				BFAA1ACD2085D1F100B088B3 /* Tabbar */,
 				BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */,
 				BFAA1AA12085CCDC00B088B3 /* ViewController.swift */,
@@ -254,14 +262,6 @@
 				BFCE143A208DBB8F003FEB5E /* View */,
 			);
 			path = Homepage;
-			sourceTree = "<group>";
-		};
-		BFAA1AD22085D35700B088B3 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				BFAA1AD92085D4DA00B088B3 /* LNVideoViewController.swift */,
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 		BFAA1AD32085D36000B088B3 /* PersonalCenter */ = {
@@ -503,7 +503,6 @@
 				BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */,
 				BF9F49C5209424150001F43D /* ESPullToRefresh.swift in Sources */,
 				BF9F49C9209424150001F43D /* ESRefreshHeaderAnimator.swift in Sources */,
-				BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */,
 				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
 				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
 				BF9F49C6209424150001F43D /* ESRefreshProtocol.swift in Sources */,
@@ -513,6 +512,7 @@
 				BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */,
 				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
 				BF9F49C4209424150001F43D /* ES.swift in Sources */,
+				BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */,
 				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,9 +679,11 @@
 			baseConfigurationReference = 9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,9 +700,11 @@
 			baseConfigurationReference = EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
