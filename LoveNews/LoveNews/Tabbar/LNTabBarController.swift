@@ -15,7 +15,7 @@ class LNTabBarController: UITabBarController {
 
         //首页
         let homeVC = LNHomeViewController()
-        self.addChildViewController(childerVC: homeVC, title: "首页", normalImg: "tabbar03_normal", selectedImg: "tabbar03_selected")
+        self.addChildViewController(childerVC: homeVC, title: "热映", normalImg: "tabbar03_normal", selectedImg: "tabbar03_selected")
         
         //视频
         let myShowVC = LNVideoViewController()

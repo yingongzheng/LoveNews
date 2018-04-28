@@ -14,7 +14,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireObjectMapper
-import ESPullToRefresh
 
 class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -41,9 +40,9 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
             self?.table.es.stopPullToRefresh(ignoreDate: true)
         }
         self.table.es.startPullToRefresh()
-    
+        
     }
-    
+        
     func getData() {
         let URL = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290"
         Alamofire.request(URL).responseObject { (response: DataResponse<HotPlayModel>) in

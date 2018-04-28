@@ -10,6 +10,15 @@
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
+		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
+		BF9F49C5209424150001F43D /* ESPullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BB209424140001F43D /* ESPullToRefresh.swift */; };
+		BF9F49C6209424150001F43D /* ESRefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BC209424140001F43D /* ESRefreshProtocol.swift */; };
+		BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BD209424140001F43D /* ESRefreshComponent.swift */; };
+		BF9F49C8209424150001F43D /* ESRefreshAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BE209424150001F43D /* ESRefreshAnimator.swift */; };
+		BF9F49C9209424150001F43D /* ESRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49C0209424150001F43D /* ESRefreshHeaderAnimator.swift */; };
+		BF9F49CA209424150001F43D /* icon_pull_to_refresh_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9F49C1209424150001F43D /* icon_pull_to_refresh_arrow@2x.png */; };
+		BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49C2209424150001F43D /* ESRefreshFooterAnimator.swift */; };
+		BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49C3209424150001F43D /* ESPullToRefresh+Manager.swift */; };
 		BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */; };
 		BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AA12085CCDC00B088B3 /* ViewController.swift */; };
 		BFAA1AA72085CCDD00B088B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1AA62085CCDD00B088B3 /* Assets.xcassets */; };
@@ -47,6 +56,15 @@
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
+		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
+		BF9F49BB209424140001F43D /* ESPullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPullToRefresh.swift; sourceTree = "<group>"; };
+		BF9F49BC209424140001F43D /* ESRefreshProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshProtocol.swift; sourceTree = "<group>"; };
+		BF9F49BD209424140001F43D /* ESRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshComponent.swift; sourceTree = "<group>"; };
+		BF9F49BE209424150001F43D /* ESRefreshAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshAnimator.swift; sourceTree = "<group>"; };
+		BF9F49C0209424150001F43D /* ESRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
+		BF9F49C1209424150001F43D /* icon_pull_to_refresh_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pull_to_refresh_arrow@2x.png"; sourceTree = "<group>"; };
+		BF9F49C2209424150001F43D /* ESRefreshFooterAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRefreshFooterAnimator.swift; sourceTree = "<group>"; };
+		BF9F49C3209424150001F43D /* ESPullToRefresh+Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESPullToRefresh+Manager.swift"; sourceTree = "<group>"; };
 		BFAA1A9C2085CCDC00B088B3 /* LoveNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA1A9F2085CCDC00B088B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAA1AA12085CCDC00B088B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +133,7 @@
 		BF9F49B2209415460001F43D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF9F49B9209422B40001F43D /* PullToRefresh */,
 				BF9F49B4209415670001F43D /* Define */,
 				BF9F49B3209415520001F43D /* Categories */,
 			);
@@ -135,6 +154,30 @@
 				BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		BF9F49B9209422B40001F43D /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F49BF209424150001F43D /* Animator */,
+				BF9F49BA209424140001F43D /* ES.swift */,
+				BF9F49BB209424140001F43D /* ESPullToRefresh.swift */,
+				BF9F49C3209424150001F43D /* ESPullToRefresh+Manager.swift */,
+				BF9F49BE209424150001F43D /* ESRefreshAnimator.swift */,
+				BF9F49BD209424140001F43D /* ESRefreshComponent.swift */,
+				BF9F49BC209424140001F43D /* ESRefreshProtocol.swift */,
+			);
+			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		BF9F49BF209424150001F43D /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F49C0209424150001F43D /* ESRefreshHeaderAnimator.swift */,
+				BF9F49C1209424150001F43D /* icon_pull_to_refresh_arrow@2x.png */,
+				BF9F49C2209424150001F43D /* ESRefreshFooterAnimator.swift */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 		BFAA1A932085CCDB00B088B3 = {
@@ -376,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9F49CA209424150001F43D /* icon_pull_to_refresh_arrow@2x.png in Resources */,
 				BFAA1AAA2085CCDD00B088B3 /* LaunchScreen.storyboard in Resources */,
 				BFAA1AA72085CCDD00B088B3 /* Assets.xcassets in Resources */,
 			);
@@ -408,7 +452,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -418,7 +461,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -457,13 +499,21 @@
 				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
 				BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */,
+				BF9F49C8209424150001F43D /* ESRefreshAnimator.swift in Sources */,
 				BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */,
+				BF9F49C5209424150001F43D /* ESPullToRefresh.swift in Sources */,
+				BF9F49C9209424150001F43D /* ESRefreshHeaderAnimator.swift in Sources */,
 				BFAA1ADA2085D4DA00B088B3 /* LNVideoViewController.swift in Sources */,
 				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
 				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
+				BF9F49C6209424150001F43D /* ESRefreshProtocol.swift in Sources */,
 				BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
 				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,
+				BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */,
+				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
+				BF9F49C4209424150001F43D /* ES.swift in Sources */,
+				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
