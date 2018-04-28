@@ -8,6 +8,7 @@ target 'LoveNews' do
  pod 'Masonry', '~> 1.1.0'
  pod 'AlamofireObjectMapper', '~> 5.0.0'
  pod 'AlamofireImage', '~> 3.3.0'
+ pod 'ESPullToRefresh'
  
 end
 

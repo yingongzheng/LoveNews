@@ -14,10 +14,28 @@ import AlamofireImage
 class HomeListCell: UITableViewCell {
 
     var coverImageView:UIImageView?
-    var titleCn:UILabel?
-    var actorNameLab:UILabel?
-    var directorNameLab:UILabel?
-
+    
+    lazy var titleCnLab:UILabel  = {
+        let tempTitleCn = UILabel()
+        tempTitleCn.font = UIFont.boldSystemFont(ofSize: 18)
+        tempTitleCn.textColor = UIColor.black
+        return tempTitleCn
+    }()
+    
+    lazy var commonSpecialLab:UILabel  = {
+        let tempCommonSpecialLab = UILabel()
+        tempCommonSpecialLab.textColor = UIColor(0x729A31)
+        tempCommonSpecialLab.font = UIFont.systemFont(ofSize: 12)
+        return tempCommonSpecialLab
+    }()
+    
+    lazy var actorNameLab:UILabel  = {
+        let tempActorNameLab = UILabel()
+        tempActorNameLab.textColor = UIColor(0xA6A6A6)
+        tempActorNameLab.font = UIFont.systemFont(ofSize: 14)
+        return tempActorNameLab
+    }()
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -29,55 +47,49 @@ class HomeListCell: UITableViewCell {
         coverImageView = UIImageView()
         self.addSubview(coverImageView!)
         
-        titleCn = UILabel()
-        self.addSubview(titleCn!)
-
-        actorNameLab = UILabel()
-        self.addSubview(actorNameLab!)
-
-        directorNameLab = UILabel()
-        self.addSubview(directorNameLab!)
+        self.addSubview(titleCnLab)
+        self.addSubview(commonSpecialLab)
+        self.addSubview(actorNameLab)
         
         makeConstraints()
-    
     }
     
     func makeConstraints() {
         
         coverImageView!.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(self.mas_left)?.offset()(0)
-            make.top.equalTo()(self.mas_top)?.offset()(0)
-            make.width.mas_equalTo()(100)
-            make.height.mas_equalTo()(100)
+            make.top.equalTo()(self.mas_top)?.offset()(5)
+            make.width.mas_equalTo()(90)
+            make.height.mas_equalTo()(90)
         })
         
-        titleCn!.mas_makeConstraints({ (make : MASConstraintMaker!) in
+        titleCnLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(13)
+            make.top.equalTo()(self.mas_top)?.offset()(14)
             make.width.mas_equalTo()(200)
             make.height.mas_equalTo()(16)
         })
 
-        actorNameLab!.mas_makeConstraints({ (make : MASConstraintMaker!) in
+        commonSpecialLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(titleCn?.mas_bottom)?.offset()(13)
-            make.width.mas_equalTo()(100)
+            make.top.equalTo()(titleCnLab.mas_bottom)?.offset()(14)
+            make.width.mas_equalTo()(300)
             make.height.mas_equalTo()(16)
         })
 
-        directorNameLab!.mas_makeConstraints({ (make : MASConstraintMaker!) in
+        actorNameLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(actorNameLab?.mas_bottom)?.offset()(13)
-            make.width.mas_equalTo()(100)
+            make.top.equalTo()(commonSpecialLab.mas_bottom)?.offset()(14)
+            make.width.mas_equalTo()(200)
             make.height.mas_equalTo()(16)
         })
     }
     
     func setValueForCell(model:movieModel){
         self.coverImageView?.af_setImage(withURL: URL(string: model.img)!)
-        self.titleCn?.text = String(format: "%@%@","电影名:",model.titleCn!)
-        self.actorNameLab?.text = model.actorName1
-        self.directorNameLab?.text = model.directorName
+        self.titleCnLab.text = model.titleCn
+        self.commonSpecialLab.text = String(format: "%@%@","电影名:",model.commonSpecial!)
+        self.actorNameLab.text = String(format: "%@/%@",model.actorName1!,model.actorName2!)
     }
 
 }

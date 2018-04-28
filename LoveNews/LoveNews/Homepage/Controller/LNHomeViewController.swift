@@ -14,13 +14,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireObjectMapper
+import ESPullToRefresh
 
 class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let CellIdentifierClass = "HomeList"
     var dataArr:Array<movieModel> = []
     lazy var table:UITableView  = {
-        let tempTableView = UITableView (frame: self.view.frame)
+        let tempTableView = UITableView (frame:CGRect(x: 0, y:64, width: self.view.bounds.width, height: self.view.bounds.height-64))
         tempTableView.delegate = self
         tempTableView.dataSource = self
         tempTableView.backgroundColor = UIColor.white
@@ -34,13 +35,20 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(table)
-        getData()
+        self.table.es.addPullToRefresh {
+            [weak self] in
+            self?.getData()
+            self?.table.es.stopPullToRefresh(ignoreDate: true)
+        }
+        self.table.es.startPullToRefresh()
+    
     }
     
     func getData() {
         let URL = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290"
         Alamofire.request(URL).responseObject { (response: DataResponse<HotPlayModel>) in
             let responseValue = response.result.value
+            self.dataArr.removeAll()
             if let Arr = responseValue?.movies {
                 for movie in Arr {
                     self.dataArr.append(movie)
@@ -52,7 +60,6 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return dataArr.count
     }
     
@@ -72,7 +79,7 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110.00
+        return 100.00
     }
     
 }

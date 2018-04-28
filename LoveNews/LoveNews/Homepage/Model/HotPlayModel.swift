@@ -67,6 +67,7 @@ class movieModel: Mappable {
         titleEn <- map["titleEn"]
         type <- map["type"]
         wantedCount <- map["wantedCount"]
+        commonSpecial <- map["commonSpecial"]
         
     }
 }
