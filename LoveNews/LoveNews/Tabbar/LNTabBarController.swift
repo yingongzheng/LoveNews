@@ -39,8 +39,7 @@ class LNTabBarController: UITabBarController {
         self.tabBarItem.title = title as String
          UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0,-5)
         
-        let color = UIColor.black
-        self.tabBar.tintColor = color
+        self.tabBar.tintColor = UIColor.black
         
         childerVC.title = title as String
         
@@ -53,9 +52,13 @@ class LNTabBarController: UITabBarController {
         let tabItem = UITabBarItem(title: title as String, image: norImg,selectedImage: selImg)
         
         let naVc = UINavigationController()
+        UINavigationBar.appearance().barTintColor = UIColor(0x1E2634)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
         naVc.tabBarItem = tabItem
         naVc.addChildViewController(childerVC)
         self.addChildViewController(naVc)
+        
         
     }
 }
