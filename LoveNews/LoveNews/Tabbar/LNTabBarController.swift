@@ -16,19 +16,19 @@ class LNTabBarController: UITabBarController {
         //首页
         let homeVC = LNHomeViewController()
         self.addChildViewController(childerVC: homeVC, title: "热映", normalImg: "home", selectedImg: "home_on")
-        
+
         //视频
         let liveVC = LNVideoViewController()
         self.addChildViewController(childerVC: liveVC, title: "视频", normalImg: "live", selectedImg: "live_on")
-    
+
         //商城
         let mallVC = LNMallViewController()
         self.addChildViewController(childerVC: mallVC, title: "商城", normalImg: "store", selectedImg: "store_on")
-        
+
         //会员中心
         let memberCenterVc = LNPersonalCenterViewController()
         self.addChildViewController(childerVC: memberCenterVc, title: "我的", normalImg: "myinfo", selectedImg: "myinfo_on")
-        
+
         self.selectedIndex = 0
     }
 
@@ -37,7 +37,7 @@ class LNTabBarController: UITabBarController {
                                 selectedImg:NSString)  {
         
         self.tabBarItem.title = title as String
-//         UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0,-5)
+         UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0,-5)
         
         let color = UIColor.black
         self.tabBar.tintColor = color
