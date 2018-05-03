@@ -64,6 +64,7 @@ class LNHomeBasicModel: Mappable {
     var story:String?
     var stageImg: LNStageModel?
     var video:LNVideoModel?
+    var type:[String]?
     
     required init?(map: Map) {
         
@@ -88,6 +89,7 @@ class LNHomeBasicModel: Mappable {
         story <- map["story"]
         stageImg <- map["stageImg"]
         video <- map["video"]
+        type <- map["type"]
     
     }
 }

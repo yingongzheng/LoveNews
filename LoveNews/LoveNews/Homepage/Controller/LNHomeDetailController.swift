@@ -19,7 +19,7 @@ class LNHomeDetailController :LNBaseViewController {
     var passMovieModel :movieModel?
     
     lazy var storyView:UIView  = {
-        let tempStoryView = UIView (frame:CGRect(x: 0, y:64+10+120, width:kScreenWitdh, height:100))
+        let tempStoryView = UIView (frame:CGRect(x: 0, y:64+130+10+10, width:kScreenWitdh, height:100))
         tempStoryView.backgroundColor = UIColor.white
         return tempStoryView
     }()
@@ -33,23 +33,17 @@ class LNHomeDetailController :LNBaseViewController {
         return storyLab
     }()
     
+    lazy var movieItroduceView: LNMovieItroduceView = {
+         let tempMovieItroduceView  = LNMovieItroduceView(frame: CGRect(x: 0, y:64+10, width:kScreenWitdh, height:130))
+        return tempMovieItroduceView
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor =  UIColor(0xEBEBEB)
         self.title = self.passMovieModel?.tCn
         
-        //影片简介
-        
-        let movieItroduceView = LNMovieItroduceView(frame: CGRect(x: 0, y:64+10, width:kScreenWitdh, height:110))
-        movieItroduceView.refreshForView(movieModel:passMovieModel!)
-        
-        
-        self.view.addSubview(movieItroduceView)
-        
-        //影片剧情
-        storyView.addSubview(storyLab)
-        self.view.addSubview(storyView)
         self.getData()
         
     }
@@ -78,7 +72,16 @@ class LNHomeDetailController :LNBaseViewController {
     
     
     func refreshData() {
+        //影片简介
+        self.view.addSubview(movieItroduceView)
+        movieItroduceView.refreshForView(movieModel:passMovieModel!, detailModel:detailModel!)
         storyLab.text = self.detailModel?.data?.basic?.story
+        
+        //影片剧情
+        storyView.addSubview(storyLab)
+        self.view.addSubview(storyView)
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
