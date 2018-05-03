@@ -10,6 +10,7 @@
  * 接口请求地址 https://raw.githubusercontent.com/jokermonn/-Api/master/Time.md
  */
 
+
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -44,11 +45,10 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
         
     func getData() {
-        let URL = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290"
-        Alamofire.request(URL).responseObject { (response: DataResponse<HotPlayModel>) in
+        Alamofire.request(homeUrl).responseObject { (response: DataResponse<HotPlayModel>) in
             let responseValue = response.result.value
             self.dataArr.removeAll()
-            if let Arr = responseValue?.movies {
+            if let Arr = responseValue?.ms {
                 for movie in Arr {
                     self.dataArr.append(movie)
                 }
@@ -81,4 +81,9 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         return 100.00
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = LNHomeDetailController()
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

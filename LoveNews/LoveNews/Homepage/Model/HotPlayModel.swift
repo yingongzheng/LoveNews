@@ -13,10 +13,7 @@ import ObjectMapper
 
 class HotPlayModel: Mappable {
     
-    
-    var totalCinemaCount:NSNumber = 0
-    var count :NSNumber = 0
-    var movies: [movieModel]?
+    var ms: [movieModel]?
     
     required init?(map: Map) {
         
@@ -24,9 +21,7 @@ class HotPlayModel: Mappable {
     
     func mapping(map: Map) {
         
-        totalCinemaCount <- map["totalCinemaCount"]
-        count <- map["count"]
-        movies <- map["movies"]
+        ms <- map["ms"]
         
     }
 }
@@ -35,19 +30,15 @@ class HotPlayModel: Mappable {
 
 class movieModel: Mappable {
     
-    
-    var totalCinemaCount:NSNumber = 0
-    var count :NSNumber = 0
-    var actorName1 :String?
-    var actorName2 :String?
+    var actors :String?
     var commonSpecial:String?
-    var directorName:String?
+    var dN:String?
     var img:String = ""
     var is3D:Bool = true
     var isIMAX:Bool = true
-    var titleCn:String?
-    var titleEn:String?
-    var type:String?
+    var tCn:String?
+    var tEn:String?
+    var movieType:String?
     var wantedCount:NSNumber = 0
     
     required init?(map: Map) {
@@ -56,18 +47,16 @@ class movieModel: Mappable {
     
     func mapping(map: Map) {
         
-        actorName1 <- map["actorName1"]
-        actorName2 <- map["actorName2"]
+        actors <- map["actors"]
         commonSpecial <- map["commonSpecial"]
-        directorName <- map["directorName"]
+        dN <- map["dN"]
         img <- map["img"]
         is3D <- map["is3D"]
         isIMAX <- map["isIMAX"]
-        titleCn <- map["titleCn"]
-        titleEn <- map["titleEn"]
-        type <- map["type"]
+        tCn <- map["tCn"]
+        tEn <- map["tEn"]
+        movieType <- map["movieType"]
         wantedCount <- map["wantedCount"]
-        commonSpecial <- map["commonSpecial"]
         
     }
 }

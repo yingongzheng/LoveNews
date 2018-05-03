@@ -6,4 +6,17 @@
 //  Copyright © 2018年 ygz. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+/// 全屏宽度
+let kScreenWitdh = UIScreen.main.bounds.width
+/// 全屏高度，不含状态栏高度
+let kScreenHeight = UIScreen.main.bounds.height
+
+
+
+//网络
+
+let homeUrl = "https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=290"
+

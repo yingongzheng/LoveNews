@@ -32,10 +32,9 @@ class HomeListCell: UITableViewCell {
     lazy var actorNameLab:UILabel  = {
         let tempActorNameLab = UILabel()
         tempActorNameLab.textColor = UIColor(0xA6A6A6)
-        tempActorNameLab.font = UIFont.systemFont(ofSize: 14)
+        tempActorNameLab.font = UIFont.systemFont(ofSize: 12)
         return tempActorNameLab
     }()
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -57,7 +56,7 @@ class HomeListCell: UITableViewCell {
     func makeConstraints() {
         
         coverImageView!.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(0)
+            make.left.equalTo()(self.mas_left)?.offset()(10)
             make.top.equalTo()(self.mas_top)?.offset()(5)
             make.width.mas_equalTo()(90)
             make.height.mas_equalTo()(90)
@@ -80,16 +79,21 @@ class HomeListCell: UITableViewCell {
         actorNameLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
             make.top.equalTo()(commonSpecialLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(200)
+            make.width.mas_equalTo()(kScreenWitdh-20-90)
             make.height.mas_equalTo()(16)
         })
     }
     
     func setValueForCell(model:movieModel){
         self.coverImageView?.af_setImage(withURL: URL(string: model.img)!)
-        self.titleCnLab.text = model.titleCn
-        self.commonSpecialLab.text = String(format: "%@%@","电影名:",model.commonSpecial!)
-        self.actorNameLab.text = String(format: "%@/%@",model.actorName1!,model.actorName2!)
+        self.titleCnLab.text = model.tCn
+        
+        var commonSpecialStr :String = model.commonSpecial!
+        if (commonSpecialStr.isEmpty) {
+            commonSpecialStr = model.movieType!
+        }
+        self.commonSpecialLab.text = String(format: "%@",commonSpecialStr)
+        self.actorNameLab.text = String(format: "%@",model.actors!)
     }
 
 }

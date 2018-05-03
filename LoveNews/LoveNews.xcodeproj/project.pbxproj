@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
+		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */,
+				BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				BF9F49C6209424150001F43D /* ESRefreshProtocol.swift in Sources */,
 				BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
+				BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */,
 				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,
 				BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */,
 				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
