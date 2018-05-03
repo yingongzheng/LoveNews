@@ -13,7 +13,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import AlamofireObjectMapper
 
 class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -84,6 +83,8 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailVC = LNHomeDetailController()
+        let movieModel = dataArr[indexPath.row]
+        detailVC.passMovieModel  = movieModel
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

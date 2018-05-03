@@ -40,7 +40,7 @@ class movieModel: Mappable {
     var tEn:String?
     var movieType:String?
     var wantedCount:NSNumber = 0
-    
+    var movieId :Double = 0
     required init?(map: Map) {
         
     }
@@ -57,6 +57,7 @@ class movieModel: Mappable {
         tEn <- map["tEn"]
         movieType <- map["movieType"]
         wantedCount <- map["wantedCount"]
+        movieId <- map["id"]
         
     }
 }

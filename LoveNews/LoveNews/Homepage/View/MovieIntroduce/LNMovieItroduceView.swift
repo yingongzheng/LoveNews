@@ -1,18 +1,17 @@
 //
-//  HomeListCell.swift
-//  LoveNews
+//  LNMovieItroduceView.swift
+//  影片详情 简介
 //
-//  Created by yingz on 2018/4/23.
+//  Created by yingz on 2018/5/3.
 //  Copyright © 2018年 ygz. All rights reserved.
 //
 
 import UIKit
 import Masonry
-import Alamofire
-import AlamofireImage
 
-class HomeListCell: UITableViewCell {
 
+class LNMovieItroduceView: UIView {
+    
     var coverImageView:UIImageView?
     
     lazy var titleCnLab:UILabel  = {
@@ -40,9 +39,9 @@ class HomeListCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.white
         coverImageView = UIImageView()
         self.addSubview(coverImageView!)
         
@@ -50,10 +49,18 @@ class HomeListCell: UITableViewCell {
         self.addSubview(commonSpecialLab)
         self.addSubview(actorNameLab)
         
+        titleCnLab.text = "titleCnLab"
+        commonSpecialLab.text = "commonSpecialLab"
+        actorNameLab.text = "actorNameLab"
         makeConstraints()
     }
     
     
+    func refreshForView(movieModel:movieModel) {
+          self.coverImageView?.af_setImage(withURL: URL(string: movieModel.img)!)
+        
+    }
+   
     func makeConstraints() {
         
         coverImageView!.mas_makeConstraints({ (make : MASConstraintMaker!) in
@@ -69,14 +76,14 @@ class HomeListCell: UITableViewCell {
             make.width.mas_equalTo()(200)
             make.height.mas_equalTo()(16)
         })
-
+        
         commonSpecialLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
             make.top.equalTo()(titleCnLab.mas_bottom)?.offset()(14)
             make.width.mas_equalTo()(300)
             make.height.mas_equalTo()(16)
         })
-
+        
         actorNameLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
             make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
             make.top.equalTo()(commonSpecialLab.mas_bottom)?.offset()(14)
@@ -85,16 +92,4 @@ class HomeListCell: UITableViewCell {
         })
     }
     
-    func setValueForCell(model:movieModel){
-        self.coverImageView?.af_setImage(withURL: URL(string: model.img)!)
-        self.titleCnLab.text = model.tCn
-        
-        var commonSpecialStr :String = model.commonSpecial!
-        if (commonSpecialStr.isEmpty) {
-            commonSpecialStr = model.movieType!
-        }
-        self.commonSpecialLab.text = String(format: "%@",commonSpecialStr)
-        self.actorNameLab.text = String(format: "%@",model.actors!)
-    }
-
 }

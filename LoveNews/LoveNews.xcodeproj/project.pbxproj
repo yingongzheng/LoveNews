@@ -10,6 +10,8 @@
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
+		BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */; };
+		BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -58,6 +60,8 @@
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
+		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
+		BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMovieItroduceView.swift; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 				BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BF1E99B1209AFA420070A620 /* MovieIntroduce */ = {
+			isa = PBXGroup;
+			children = (
+				BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */,
+			);
+			path = MovieIntroduce;
 			sourceTree = "<group>";
 		};
 		BF9F49B2209415460001F43D /* Common */ = {
@@ -296,6 +308,7 @@
 		BFCE143A208DBB8F003FEB5E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF1E99B1209AFA420070A620 /* MovieIntroduce */,
 				BFCE143B208DBB98003FEB5E /* HomeListCell */,
 			);
 			path = View;
@@ -313,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */,
+				BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,7 +482,6 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -477,7 +490,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,6 +532,7 @@
 				BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */,
 				BFAA1ACF2085D26C00B088B3 /* LNTabBarController.swift in Sources */,
 				BF9F49C6209424150001F43D /* ESRefreshProtocol.swift in Sources */,
+				BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */,
 				BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
 				BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */,
@@ -529,6 +542,7 @@
 				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
 				BF9F49C4209424150001F43D /* ES.swift in Sources */,
 				BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */,
+				BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */,
 				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,10 +714,7 @@
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -721,10 +732,7 @@
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -740,11 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -761,11 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -781,11 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -801,11 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
