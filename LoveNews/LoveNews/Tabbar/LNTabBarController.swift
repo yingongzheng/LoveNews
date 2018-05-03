@@ -50,8 +50,8 @@ class LNTabBarController: UITabBarController {
         selImg = selImg?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         
         let tabItem = UITabBarItem(title: title as String, image: norImg,selectedImage: selImg)
-        
         let naVc = UINavigationController()
+        
         UINavigationBar.appearance().barTintColor = UIColor(0x1E2634)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
@@ -59,6 +59,11 @@ class LNTabBarController: UITabBarController {
         naVc.addChildViewController(childerVC)
         self.addChildViewController(naVc)
         
+    }
+    
+    @objc func  backToPrevious() {
         
     }
+    
+
 }

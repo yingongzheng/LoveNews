@@ -11,7 +11,7 @@ import UIKit
 //https://ticket-api-m.mtime.cn/movie/detail.api?locationId=290&movieId=253823
 //https://ticket-api-m.mtime.cn/movie/hotComment.api?movieId=253823
 
-class LNHomeDetailController :UIViewController {
+class LNHomeDetailController :LNBaseViewController {
     
     lazy var storyView:UIView  = {
         let tempStoryView = UIView (frame:CGRect(x: 0, y:64, width:kScreenWitdh, height:100))
@@ -37,7 +37,7 @@ class LNHomeDetailController :UIViewController {
         
     }
     
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.tabBarController?.tabBar.isHidden = true
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
+		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -56,6 +57,7 @@
 		1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
+		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 				EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF1E99AC209ADC6C0070A620 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		BF9F49B2209415460001F43D /* Common */ = {
@@ -215,6 +225,7 @@
 		BFAA1A9E2085CCDC00B088B3 /* LoveNews */ = {
 			isa = PBXGroup;
 			children = (
+				BF1E99AC209ADC6C0070A620 /* Base */,
 				BFAA1AD12085D34800B088B3 /* Homepage */,
 				BF9F49CF20945CFB0001F43D /* Video */,
 				BFAA1AD42085D43A00B088B3 /* Mall */,
@@ -514,6 +525,7 @@
 				BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */,
 				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,
 				BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */,
+				BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */,
 				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
 				BF9F49C4209424150001F43D /* ES.swift in Sources */,
 				BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */,
