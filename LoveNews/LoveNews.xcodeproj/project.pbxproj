@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
+		BF1682F0209C551600767563 /* LNHotCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682EF209C551600767563 /* LNHotCommentModel.swift */; };
 		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
 		BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */; };
@@ -16,6 +17,7 @@
 		BF443BA4209BFAD900620154 /* UIView +Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BA3209BFAD900620154 /* UIView +Category.swift */; };
 		BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BA5209BFFCD00620154 /* LNActorsItemView.swift */; };
 		BF443BAB209C471700620154 /* LNStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BAA209C471700620154 /* LNStoryView.swift */; };
+		BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BAD209C4C7300620154 /* LNCommentCell.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -63,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1682EF209C551600767563 /* LNHotCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHotCommentModel.swift; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		BF443BA3209BFAD900620154 /* UIView +Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +Category.swift"; sourceTree = "<group>"; };
 		BF443BA5209BFFCD00620154 /* LNActorsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNActorsItemView.swift; sourceTree = "<group>"; };
 		BF443BAA209C471700620154 /* LNStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNStoryView.swift; sourceTree = "<group>"; };
+		BF443BAD209C4C7300620154 /* LNCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNCommentCell.swift; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -170,6 +174,14 @@
 				BF443BAA209C471700620154 /* LNStoryView.swift */,
 			);
 			path = StoryView;
+			sourceTree = "<group>";
+		};
+		BF443BAC209C4B8C00620154 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF443BAD209C4C7300620154 /* LNCommentCell.swift */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 		BF9F49B2209415460001F43D /* Common */ = {
@@ -337,6 +349,7 @@
 		BFCE143A208DBB8F003FEB5E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF443BAC209C4B8C00620154 /* CommentCell */,
 				BF443BA9209C46E900620154 /* StoryView */,
 				BFA5CD5A209BF2FA004DFA01 /* ActorsView */,
 				BF1E99B1209AFA420070A620 /* MovieIntroduceView */,
@@ -356,6 +369,7 @@
 		BFCE1440208DBC9C003FEB5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF1682EF209C551600767563 /* LNHotCommentModel.swift */,
 				BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */,
 				BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */,
 			);
@@ -556,6 +570,7 @@
 				BFCE1442208DBCCA003FEB5E /* HotPlayModel.swift in Sources */,
 				BF443BAB209C471700620154 /* LNStoryView.swift in Sources */,
 				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
+				BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */,
 				BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
 				BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */,
@@ -570,6 +585,7 @@
 				BF443BA4209BFAD900620154 /* UIView +Category.swift in Sources */,
 				BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */,
 				BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */,
+				BF1682F0209C551600767563 /* LNHotCommentModel.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
 				BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */,
 				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,

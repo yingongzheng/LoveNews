@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 
 
-class LNHomeDetailController :LNBaseViewController {
+class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     var actorsArr:Array<LNActorsModel> = []
     var StageImgsArr:Array<LNStageImgModel> = []
@@ -20,7 +20,7 @@ class LNHomeDetailController :LNBaseViewController {
     
     
     lazy var movieItroduceView: LNMovieItroduceView = {
-        let tempMovieItroduceView  = LNMovieItroduceView(frame: CGRect(x: 0, y:64+10, width:kScreenWitdh, height:130))
+        let tempMovieItroduceView  = LNMovieItroduceView(frame: CGRect(x: 0, y:10, width:kScreenWitdh, height:130))
         return tempMovieItroduceView
     }()
     
@@ -36,16 +36,36 @@ class LNHomeDetailController :LNBaseViewController {
     }()
     
     
+    let CellIdentifierClass = "commentList"
+    var dataArr:Array<LNCommentModel> = []
+    lazy var table:UITableView  = {
+        let tempTableView = UITableView (frame:CGRect(x: 0, y:actorsView.bottom+10, width: kScreenWitdh, height: 900))
+        tempTableView.delegate = self
+        tempTableView.dataSource = self
+        tempTableView.backgroundColor = UIColor.white
+        tempTableView.separatorStyle = .singleLine
+        tempTableView.tableFooterView = UIView()
+        tempTableView.isScrollEnabled = false
+        tempTableView.register(LNCommentCell.self, forCellReuseIdentifier: CellIdentifierClass)
+        return tempTableView
+    }()
+    
+    lazy var scrollview:UIScrollView = {
+        let tempScrollview = UIScrollView(frame: CGRect(x:0, y:64, width:kScreenWitdh, height: kScreenHeight-64))
+        tempScrollview.showsVerticalScrollIndicator = true
+        return tempScrollview
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor =  UIColor(0xEBEBEB)
         self.title = self.passMovieModel?.tCn
-        self.getData()
-        
+        self.getDetail()
+        self.getCommentData()
     }
     
-
-    func getData() {
+    func getDetail() {
         
         let movieId = self.passMovieModel?.movieId
         let requestUrl:String = String(format: "%@%.0f", homeDetailUrl,movieId!)
@@ -66,23 +86,66 @@ class LNHomeDetailController :LNBaseViewController {
      }
 }
     
+    func getCommentData() {
+        
+        let movieId = self.passMovieModel?.movieId
+        let requestUrl:String = String(format: "%@%.0f%@", hotCommentUrl,movieId!,"&pageIndex=1")
+        Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNHotCommentModel>) in
+            let responseValue = response.result.value
+            self.dataArr.removeAll()
+            if let Arr = responseValue?.data?.cts {
+                for comment in Arr {
+                    self.dataArr.append(comment)
+                }
+            }
+            self.table .reloadData()
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArr.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let indentifier = "LNCommentCell"
+        var cell:LNCommentCell! = tableView.dequeueReusableCell(withIdentifier: indentifier)as?LNCommentCell
+        if cell == nil {
+            cell =  LNCommentCell(style: .default, reuseIdentifier: indentifier)
+        }
+        cell.setValueForCell(model: dataArr[indexPath.row])
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.00
+    }
+    
     
     func refreshData() {
+        
+        self.view.addSubview(scrollview)
         //影片简介
-        self.view.addSubview(movieItroduceView)
+        scrollview.addSubview(movieItroduceView)
         movieItroduceView.refreshForView(movieModel:passMovieModel!, detailModel:detailModel!)
-    
+
         //影片剧情
-        self.view.addSubview(storyView)
+        scrollview.addSubview(storyView)
         storyView.refreshForView(detailModel:detailModel!)
-        
+
         //演员图片集
-        self.view.addSubview(actorsView)
+        scrollview.addSubview(actorsView)
         actorsView.refreshForView(detailModel: detailModel!)
-        
-//        UIView.animate(withDuration: 0.4) {
-//            self.storyView.frame.size.height = 200
-//        }
+
+        //热门评论
+        scrollview.addSubview(table)
+
+        scrollview.contentSize = CGSize(width:kScreenWitdh, height:movieItroduceView.height+storyView.height+actorsView.height+table.height+5*10)
         
     }
 
