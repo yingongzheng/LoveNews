@@ -14,6 +14,7 @@
 		BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */; };
 		BF1E99B5209B177B0070A620 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99B4209B177B0070A620 /* String+Category.swift */; };
 		BF443BA4209BFAD900620154 /* UIView +Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BA3209BFAD900620154 /* UIView +Category.swift */; };
+		BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BA5209BFFCD00620154 /* LNActorsItemView.swift */; };
 		BF443BAB209C471700620154 /* LNStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BAA209C471700620154 /* LNStoryView.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
