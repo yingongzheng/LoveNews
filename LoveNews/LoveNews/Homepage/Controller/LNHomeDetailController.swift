@@ -18,32 +18,28 @@ class LNHomeDetailController :LNBaseViewController {
     var detailModel :LNHomeDetailModel?
     var passMovieModel :movieModel?
     
-    lazy var storyView:UIView  = {
-        let tempStoryView = UIView (frame:CGRect(x: 0, y:64+130+10+10, width:kScreenWitdh, height:100))
-        tempStoryView.backgroundColor = UIColor.white
-        return tempStoryView
-    }()
-    
-    
-    lazy var storyLab:UILabel  = {
-        let storyLab = UILabel(frame: CGRect(x: 5, y:5, width:kScreenWitdh-5*2, height:90))
-        storyLab.textColor = UIColor(0x4c4c4c)
-        storyLab.numberOfLines = 8
-        storyLab.font = UIFont.systemFont(ofSize: 14)
-        return storyLab
-    }()
     
     lazy var movieItroduceView: LNMovieItroduceView = {
-         let tempMovieItroduceView  = LNMovieItroduceView(frame: CGRect(x: 0, y:64+10, width:kScreenWitdh, height:130))
+        let tempMovieItroduceView  = LNMovieItroduceView(frame: CGRect(x: 0, y:64+10, width:kScreenWitdh, height:130))
         return tempMovieItroduceView
     }()
     
+    lazy var storyView:LNStoryView = {
+        let storyView  = LNStoryView(frame: CGRect(x: 0, y:movieItroduceView.bottom+10, width:kScreenWitdh, height:100))
+        return storyView
+    }()
+    
 
+    lazy var actorsView:LNActorsView = {
+        let actorsView  = LNActorsView(frame: CGRect(x: 0, y:storyView.bottom+10, width:kScreenWitdh, height:190))
+        return actorsView
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor =  UIColor(0xEBEBEB)
         self.title = self.passMovieModel?.tCn
-        
         self.getData()
         
     }
@@ -75,12 +71,18 @@ class LNHomeDetailController :LNBaseViewController {
         //影片简介
         self.view.addSubview(movieItroduceView)
         movieItroduceView.refreshForView(movieModel:passMovieModel!, detailModel:detailModel!)
-        storyLab.text = self.detailModel?.data?.basic?.story
-        
+    
         //影片剧情
-        storyView.addSubview(storyLab)
         self.view.addSubview(storyView)
+        storyView.refreshForView(detailModel:detailModel!)
         
+        //演员图片集
+        self.view.addSubview(actorsView)
+        actorsView.refreshForView(detailModel: detailModel!)
+        
+//        UIView.animate(withDuration: 0.4) {
+//            self.storyView.frame.size.height = 200
+//        }
         
     }
 

@@ -78,7 +78,7 @@ class LNMovieItroduceView: UIView {
         var typeStr = ""
         if let Arr = detailModel.data?.basic?.type {
             for movieType in Arr {
-                typeStr+=movieType
+                typeStr+=String(format:"%@ ",movieType)
             }
         }
         typeLab.text = typeStr
@@ -89,8 +89,16 @@ class LNMovieItroduceView: UIView {
         let day = date?.subString(start:6, length: 2)
     
         relDateLab.text = String(format: "%@年%@月%@日%@",year!,month!,day!,"上映")
-        topicLab.text = detailModel.data?.basic?.commentSpecial
-        quoteImg.image = UIImage(named: "icon_quote")
+       
+        let commentSpecial = detailModel.data?.basic?.commentSpecial
+        if (commentSpecial?.isEmpty)! {
+            topicLab.text = ""
+            quoteImg.image = UIImage(named: "")
+        }else {
+            topicLab.text = commentSpecial
+            quoteImg.image = UIImage(named: "icon_quote")
+        }
+       
         
     }
    
