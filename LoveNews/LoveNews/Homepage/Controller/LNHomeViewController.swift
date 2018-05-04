@@ -44,6 +44,9 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
         
     func getData() {
+        
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = MBProgressHUDMode.determinate;
         Alamofire.request(homeUrl).responseObject { (response: DataResponse<HotPlayModel>) in
             let responseValue = response.result.value
             self.dataArr.removeAll()
@@ -52,6 +55,7 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
                     self.dataArr.append(movie)
                 }
             }
+            MBProgressHUD .hide(for: self.view, animated: true)
             self.table .reloadData()
         }
     }

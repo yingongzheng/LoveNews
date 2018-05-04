@@ -39,7 +39,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     let CellIdentifierClass = "commentList"
     var dataArr:Array<LNCommentModel> = []
     lazy var table:UITableView  = {
-        let tempTableView = UITableView (frame:CGRect(x: 0, y:actorsView.bottom+10, width: kScreenWitdh, height: 900))
+        let tempTableView = UITableView (frame:CGRect(x: 0, y:actorsView.bottom+10, width: kScreenWitdh, height: 1000))
         tempTableView.delegate = self
         tempTableView.dataSource = self
         tempTableView.backgroundColor = UIColor.white
@@ -69,6 +69,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
         
         let movieId = self.passMovieModel?.movieId
         let requestUrl:String = String(format: "%@%.0f", homeDetailUrl,movieId!)
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNHomeDetailModel>) in
             let responseValue = response.result.value
             self.detailModel = responseValue
@@ -82,7 +83,9 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
                 self.StageImgsArr.append(stage)
             }
           }
-          self.refreshData()
+        hud.mode = MBProgressHUDMode.determinate;
+        MBProgressHUD .hide(for: self.view, animated: true)
+        self.refreshData()
      }
 }
     
@@ -90,6 +93,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
         
         let movieId = self.passMovieModel?.movieId
         let requestUrl:String = String(format: "%@%.0f%@", hotCommentUrl,movieId!,"&pageIndex=1")
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNHotCommentModel>) in
             let responseValue = response.result.value
             self.dataArr.removeAll()
@@ -98,7 +102,10 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
                     self.dataArr.append(comment)
                 }
             }
+            hud.mode = MBProgressHUDMode.determinate;
+            MBProgressHUD .hide(for: self.view, animated: true)
             self.table .reloadData()
+           
         }
     }
     
@@ -123,7 +130,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.00
+        return 100.00
     }
     
     

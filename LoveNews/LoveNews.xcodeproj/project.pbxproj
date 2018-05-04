@@ -66,6 +66,7 @@
 		1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1682EF209C551600767563 /* LNHotCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHotCommentModel.swift; sourceTree = "<group>"; };
+		BF1682F7209C5ECA00767563 /* LoveNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoveNews-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
@@ -208,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */,
+				BF1682F7209C5ECA00767563 /* LoveNews-Bridging-Header.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -456,6 +458,7 @@
 				TargetAttributes = {
 					BFAA1A9B2085CCDC00B088B3 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					BFAA1AAF2085CCDD00B088B3 = {
 						CreatedOnToolsVersion = 9.3;
@@ -525,6 +528,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -533,6 +537,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -762,6 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
@@ -772,6 +778,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoveNews/Common/Define/LoveNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -783,6 +791,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
@@ -793,6 +802,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoveNews/Common/Define/LoveNews-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -91,7 +91,11 @@ class LNCommentCell: UITableViewCell {
         self.headImg.af_setImage(withURL: URL(string: model.caimg!)!)
         nickNameLab.text = model.ca
         contentLab.text = model.ce
-        areaLab.text = String(format: "%@%@",model.cal!,"网友")
+        var area = model.cal
+        if (area?.isEmpty)! {
+            area = "火星"
+        }
+        areaLab.text = String(format: "%@%@",area!,"网友")
     }
     
 }
