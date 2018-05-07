@@ -1,5 +1,5 @@
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'LoveNews' do
@@ -8,7 +8,7 @@ target 'LoveNews' do
  pod 'AlamofireObjectMapper', '~> 5.0.0'
  pod 'AlamofireImage', '~> 3.3.0'
  pod 'MBProgressHUD', '~> 1.1.0'
- 
+ pod 'Player', '~> 0.8.4'
 end
 
 

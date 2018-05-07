@@ -86,6 +86,11 @@ class LNVideoViewController: UIViewController,UICollectionViewDataSource,UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let row = indexPath.row
         print("click \(row)")
+        
+        let detailVC = LVVideoDetailController()
+//        let movieModel = dataArr[indexPath.row]
+//        detailVC.passMovieModel  = movieModel
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 
 }

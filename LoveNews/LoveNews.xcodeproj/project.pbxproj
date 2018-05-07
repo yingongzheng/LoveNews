@@ -190,6 +190,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BF16830820A0405400767563 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VideoPlay;
+			sourceTree = "<group>";
+		};
 		BF1E99AC209ADC6C0070A620 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +232,7 @@
 		BF9F49B2209415460001F43D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF16830820A0405400767563 /* VideoPlay */,
 				BF9F49B9209422B40001F43D /* PullToRefresh */,
 				BF9F49B4209415670001F43D /* Define */,
 				BF9F49B3209415520001F43D /* Categories */,
@@ -570,6 +578,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -579,6 +588,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -809,13 +819,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -833,13 +844,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
