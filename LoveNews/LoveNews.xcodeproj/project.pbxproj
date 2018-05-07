@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BF1682F0209C551600767563 /* LNHotCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682EF209C551600767563 /* LNHotCommentModel.swift */; };
+		BF1682FD209FEF4A00767563 /* LNVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */; };
 		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
 		BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */; };
@@ -67,6 +68,7 @@
 		9F2088907641687F1C17F101 /* Pods-LoveNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1682EF209C551600767563 /* LNHotCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHotCommentModel.swift; sourceTree = "<group>"; };
 		BF1682F7209C5ECA00767563 /* LoveNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoveNews-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 				EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF1682FB209FEF1800767563 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BF1E99AC209ADC6C0070A620 /* Base */ = {
@@ -241,6 +251,7 @@
 		BF9F49CF20945CFB0001F43D /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				BF1682FB209FEF1800767563 /* View */,
 				BF9F49D020945D280001F43D /* LNVideoViewController.swift */,
 			);
 			path = Video;
@@ -601,6 +612,7 @@
 				BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */,
 				BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */,
 				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
+				BF1682FD209FEF4A00767563 /* LNVideoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
