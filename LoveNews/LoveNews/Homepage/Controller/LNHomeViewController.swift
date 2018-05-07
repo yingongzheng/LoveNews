@@ -47,7 +47,7 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud.mode = MBProgressHUDMode.determinate;
-        Alamofire.request(homeUrl).responseObject { (response: DataResponse<HotPlayModel>) in
+        Alamofire.request(kHhomeUrl).responseObject { (response: DataResponse<HotPlayModel>) in
             let responseValue = response.result.value
             self.dataArr.removeAll()
             if let Arr = responseValue?.ms {

@@ -10,6 +10,7 @@
 		AAB874FD0B171C468E1EF14A /* Pods_LoveNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522391730E14B5F4CF040FC /* Pods_LoveNews.framework */; };
 		BF1682F0209C551600767563 /* LNHotCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682EF209C551600767563 /* LNHotCommentModel.swift */; };
 		BF1682FD209FEF4A00767563 /* LNVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */; };
+		BF16830020A0217500767563 /* LNLiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1682FF20A0217500767563 /* LNLiveModel.swift */; };
 		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
 		BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */; };
@@ -69,6 +70,7 @@
 		BF1682EF209C551600767563 /* LNHotCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHotCommentModel.swift; sourceTree = "<group>"; };
 		BF1682F7209C5ECA00767563 /* LoveNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoveNews-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF1682FF20A0217500767563 /* LNLiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNLiveModel.swift; sourceTree = "<group>"; };
 		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BF1682FE20A01FDC00767563 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF1682FF20A0217500767563 /* LNLiveModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF1E99AC209ADC6C0070A620 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +261,7 @@
 		BF9F49CF20945CFB0001F43D /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				BF1682FE20A01FDC00767563 /* Model */,
 				BF1682FB209FEF1800767563 /* View */,
 				BF9F49D020945D280001F43D /* LNVideoViewController.swift */,
 			);
@@ -589,6 +600,7 @@
 				BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */,
 				BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
+				BF16830020A0217500767563 /* LNLiveModel.swift in Sources */,
 				BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */,
 				BF9F49C8209424150001F43D /* ESRefreshAnimator.swift in Sources */,
 				BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */,

@@ -18,9 +18,10 @@ let kScreenHeight = UIScreen.main.bounds.height
 
 //网络
 
-let homeUrl = "https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=290"
-let homeDetailUrl = "https://ticket-api-m.mtime.cn/movie/detail.api?locationId=290&movieId="
-let hotCommentUrl = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?movieId="
+let kHhomeUrl = "https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=290"
+let KHomeDetailUrl = "https://ticket-api-m.mtime.cn/movie/detail.api?locationId=290&movieId="
+let KHotCommentUrl = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?movieId="
+let KLiveUrl = "https://live-api-m.mtime.cn/live_room/getLiveList"
 
 
 

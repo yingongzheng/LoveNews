@@ -17,6 +17,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     var StageImgsArr:Array<LNStageImgModel> = []
     var detailModel :LNHomeDetailModel?
     var passMovieModel :movieModel?
+    var dataArr:Array<LNCommentModel> = []
     
     
     lazy var movieItroduceView: LNMovieItroduceView = {
@@ -37,7 +38,6 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     
     
     let CellIdentifierClass = "commentList"
-    var dataArr:Array<LNCommentModel> = []
     lazy var table:UITableView  = {
         let tempTableView = UITableView (frame:CGRect(x: 0, y:actorsView.bottom+10, width: kScreenWitdh, height: 1000))
         tempTableView.delegate = self
@@ -68,7 +68,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     func getDetail() {
         
         let movieId = self.passMovieModel?.movieId
-        let requestUrl:String = String(format: "%@%.0f", homeDetailUrl,movieId!)
+        let requestUrl:String = String(format: "%@%.0f", KHomeDetailUrl,movieId!)
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNHomeDetailModel>) in
             let responseValue = response.result.value
@@ -92,7 +92,7 @@ class LNHomeDetailController :LNBaseViewController,UITableViewDelegate,UITableVi
     func getCommentData() {
         
         let movieId = self.passMovieModel?.movieId
-        let requestUrl:String = String(format: "%@%.0f%@", hotCommentUrl,movieId!,"&pageIndex=1")
+        let requestUrl:String = String(format: "%@%.0f%@", KHotCommentUrl,movieId!,"&pageIndex=1")
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNHotCommentModel>) in
             let responseValue = response.result.value
