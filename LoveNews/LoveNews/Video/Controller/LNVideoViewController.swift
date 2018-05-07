@@ -46,7 +46,7 @@ class LNVideoViewController: UIViewController,UICollectionViewDataSource,UIColle
     func getLiveData() {
         
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        Alamofire.request(KLiveUrl).responseObject { (response: DataResponse<LNLiveModel>) in
+        Alamofire.request(KLiveUrl).responseObject { (response: DataResponse<LNVideoListDetailModel>) in
             let responseValue = response.result.value
             self.dataArr.removeAll()
             //回放

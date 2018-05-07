@@ -1,5 +1,5 @@
 //
-//  LNLiveModel.swift
+//  LNVideoListDetailModel.swift
 //  LoveNews
 //
 //  Created by yingz on 2018/5/7.
@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 
-class LNLiveModel: Mappable {
+class LNVideoListDetailModel: Mappable {
     
     var data :LNLiveDataModel?
     

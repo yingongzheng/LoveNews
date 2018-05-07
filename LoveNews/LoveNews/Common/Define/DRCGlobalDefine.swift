@@ -24,6 +24,10 @@ let KHotCommentUrl = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?movie
 let KLiveUrl = "https://live-api-m.mtime.cn/live_room/getLiveList"
 
 
+//https://live-api-m.mtime.cn/live/detail?clientId=iOS_25df2c6a3aed4b73a58a7c03689d5780_580&liveId=757&locationId=290
+//https://live-api-m.mtime.cn/comment/list?commentId=0&liveId=757
+
+
 
 
 
