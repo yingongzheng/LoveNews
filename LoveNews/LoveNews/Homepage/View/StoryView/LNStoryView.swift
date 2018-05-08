@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 
 
 class LNStoryView: UIView {

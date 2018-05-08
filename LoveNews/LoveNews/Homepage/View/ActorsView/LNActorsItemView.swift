@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 
 
 class LNActorsItemView: UIView {
@@ -73,33 +73,34 @@ class LNActorsItemView: UIView {
     
     func makeConstraints() {
         
-        headImg.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.top.equalTo()(self.mas_top)?.offset()(5)
-            make.left.equalTo()(self.mas_left)?.offset()(5)
-            make.width.mas_equalTo()(120)
-            make.height.mas_equalTo()(120)
-        })
+        headImg.snp.makeConstraints { (make) in
+            make.top.equalTo(self.snp.top).offset(5)
+            make.left.equalTo(self.snp.left).offset(5)
+            make.width.equalTo(120)
+            make.height.equalTo(120)
+        }
         
-        nameCnLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.top.equalTo()(headImg.mas_bottom)?.offset()(5)
-            make.left.equalTo()(self.mas_left)?.offset()(0)
-            make.width.mas_equalTo()(130)
-            make.height.mas_equalTo()(12)
-        })
+        nameCnLab.snp.makeConstraints { (make) in
+            make.top.equalTo(headImg.snp.bottom).offset(5)
+            make.left.equalTo(self.snp.left)
+            make.width.equalTo(130)
+            make.height.equalTo(12)
+        }
         
-        nameEnLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.top.equalTo()(nameCnLab.mas_bottom)?.offset()(5)
-            make.left.equalTo()(self.mas_left)?.offset()(0)
-            make.width.mas_equalTo()(130)
-            make.height.mas_equalTo()(12)
-        })
+        nameEnLab.snp.makeConstraints { (make) in
+            make.top.equalTo(nameCnLab.snp.bottom).offset(5)
+            make.left.equalTo(self.snp.left)
+            make.width.equalTo(130)
+            make.height.equalTo(12)
+        }
         
-        roleNameLbl.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.top.equalTo()(nameEnLab.mas_bottom)?.offset()(5)
-            make.left.equalTo()(self.mas_left)?.offset()(0)
-            make.width.mas_equalTo()(130)
-            make.height.mas_equalTo()(12)
-        })
+        roleNameLbl.snp.makeConstraints { (make) in
+            make.top.equalTo(nameEnLab.snp.bottom).offset(5)
+            make.left.equalTo(self.snp.left)
+            make.width.equalTo(130)
+            make.height.equalTo(12)
+        }
+
     }
     
 }

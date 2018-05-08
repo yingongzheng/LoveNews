@@ -7,13 +7,16 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 import Alamofire
 import AlamofireImage
 
 class HomeListCell: UITableViewCell {
 
-    var coverImageView:UIImageView?
+    lazy var coverImageView :UIImageView = {
+         let coverImageView = UIImageView()
+         return coverImageView
+    }()
     
     lazy var titleCnLab:UILabel  = {
         let tempTitleCn = UILabel()
@@ -43,9 +46,7 @@ class HomeListCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        coverImageView = UIImageView()
-        self.addSubview(coverImageView!)
-        
+        self.addSubview(coverImageView)
         self.addSubview(titleCnLab)
         self.addSubview(commonSpecialLab)
         self.addSubview(actorNameLab)
@@ -56,37 +57,38 @@ class HomeListCell: UITableViewCell {
     
     func makeConstraints() {
         
-        coverImageView!.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(5)
-            make.width.mas_equalTo()(90)
-            make.height.mas_equalTo()(90)
-        })
+        coverImageView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(10)
+            make.top.equalTo(self.snp.top).offset(5)
+            make.width.equalTo(90)
+            make.height.equalTo(90)
+        }
         
-        titleCnLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(14)
-            make.width.mas_equalTo()(200)
-            make.height.mas_equalTo()(16)
-        })
-
-        commonSpecialLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(titleCnLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(300)
-            make.height.mas_equalTo()(16)
-        })
-
-        actorNameLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(commonSpecialLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(kScreenWitdh-20-90)
-            make.height.mas_equalTo()(16)
-        })
+        titleCnLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(self.snp.top).offset(14)
+            make.width.equalTo(200)
+            make.height.equalTo(16)
+        }
+        
+        commonSpecialLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(titleCnLab.snp.bottom).offset(14)
+            make.width.equalTo(300)
+            make.height.equalTo(16)
+        }
+        
+        actorNameLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(commonSpecialLab.snp.bottom).offset(14)
+            make.width.equalTo(kScreenWitdh-20-90)
+            make.height.equalTo(16)
+        }
+        
     }
     
     func setValueForCell(model:movieModel){
-        self.coverImageView?.af_setImage(withURL: URL(string: model.img)!)
+        self.coverImageView.af_setImage(withURL: URL(string: model.img)!)
         self.titleCnLab.text = model.tCn
         
         var commonSpecialStr :String = model.commonSpecial!

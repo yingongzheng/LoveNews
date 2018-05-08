@@ -7,12 +7,15 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 
 
 class LNMovieItroduceView: UIView {
     
-    var coverImageView:UIImageView?
+    lazy var coverImageView:UIImageView  = {
+        let coverImageView = UIImageView()
+        return coverImageView
+    }()
     
     lazy var timeLab:UILabel  = {
         let temptimeLab = UILabel()
@@ -58,9 +61,8 @@ class LNMovieItroduceView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
-        coverImageView = UIImageView()
-        self.addSubview(coverImageView!)
         
+        self.addSubview(coverImageView)
         self.addSubview(timeLab)
         self.addSubview(typeLab)
         self.addSubview(relDateLab)
@@ -73,7 +75,7 @@ class LNMovieItroduceView: UIView {
     
     func refreshForView(movieModel:movieModel,detailModel:LNHomeDetailModel ) {
         
-        self.coverImageView?.af_setImage(withURL: URL(string: movieModel.img)!)
+        self.coverImageView.af_setImage(withURL: URL(string: movieModel.img)!)
         timeLab.text = detailModel.data?.basic?.mins
         var typeStr = ""
         if let Arr = detailModel.data?.basic?.type {
@@ -103,48 +105,49 @@ class LNMovieItroduceView: UIView {
     }
    
     func makeConstraints() {
+    
+        coverImageView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(10)
+            make.top.equalTo(self.snp.top).offset(5)
+            make.width.equalTo(90)
+            make.height.equalTo(110)
+        }
         
-        coverImageView!.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(5)
-            make.width.mas_equalTo()(90)
-            make.height.mas_equalTo()(110)
-        })
+        timeLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(self.snp.top).offset(14)
+            make.width.equalTo(200)
+            make.height.equalTo(14)
+        }
         
-        timeLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(14)
-            make.width.mas_equalTo()(200)
-            make.height.mas_equalTo()(14)
-        })
+        typeLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(timeLab.snp.bottom).offset(14)
+            make.width.equalTo(300)
+            make.height.equalTo(14)
+        }
         
-        typeLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(timeLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(300)
-            make.height.mas_equalTo()(14)
-        })
+        relDateLab.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(typeLab.snp.bottom).offset(14)
+            make.width.equalTo(kScreenWitdh-20-90)
+            make.height.equalTo(14)
+        }
         
-        relDateLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(typeLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(kScreenWitdh-20-90)
-            make.height.mas_equalTo()(14)
-        })
+        quoteImg.snp.makeConstraints { (make) in
+            make.left.equalTo(coverImageView.snp.right).offset(10)
+            make.top.equalTo(relDateLab.snp.bottom).offset(14)
+            make.width.equalTo(14)
+            make.height.equalTo(12)
+        }
         
-        quoteImg.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(coverImageView?.mas_right)?.offset()(10)
-            make.top.equalTo()(relDateLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(14)
-            make.height.mas_equalTo()(12)
-        })
-        
-        topicLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(quoteImg.mas_right)?.offset()(5)
-            make.top.equalTo()(relDateLab.mas_bottom)?.offset()(14)
-            make.width.mas_equalTo()(kScreenWitdh-20-90)
-            make.height.mas_equalTo()(14)
-        })
+        topicLab.snp.makeConstraints { (make) in
+            make.left.equalTo(quoteImg.snp.right).offset(5)
+            make.top.equalTo(relDateLab.snp.bottom).offset(14)
+            make.width.equalTo(kScreenWitdh-20-90)
+            make.height.equalTo(14)
+        }
+
     }
     
 }

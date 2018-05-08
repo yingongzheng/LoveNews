@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 import Alamofire
 import AlamofireImage
 
@@ -59,32 +59,35 @@ class LNCommentCell: UITableViewCell {
     
     func makeConstraints() {
         
-        headImg.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(10)
-            make.width.mas_equalTo()(30)
-            make.height.mas_equalTo()(30)
-        })
         
-        nickNameLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(headImg.mas_right)?.offset()(10)
-            make.top.equalTo()(self.mas_top)?.offset()(10)
-            make.width.mas_equalTo()(200)
-            make.height.mas_equalTo()(14)
-        })
+        headImg.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(10)
+            make.top.equalTo(self.snp.top).offset(10)
+            make.width.equalTo(30)
+            make.height.equalTo(30)
+        }
         
-        contentLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(nickNameLab.mas_left)
-            make.top.equalTo()(nickNameLab.mas_bottom)?.offset()(10)
-            make.width.mas_equalTo()(kScreenWitdh-20-20-10)
-        })
+        nickNameLab.snp.makeConstraints { (make) in
+            make.left.equalTo(headImg.snp.right).offset(10)
+            make.top.equalTo(self.snp.top).offset(10)
+            make.width.equalTo(200)
+            make.height.equalTo(14)
+        }
         
-        areaLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.top.equalTo()(contentLab.mas_bottom)?.offset()(10)
-            make.left.equalTo()(nickNameLab.mas_left)
-            make.width.mas_equalTo()(kScreenWitdh-20-90)
-            make.height.mas_equalTo()(10)
-        })
+        contentLab.snp.makeConstraints { (make) in
+            make.left.equalTo(nickNameLab.snp.left)
+            make.top.equalTo(nickNameLab.snp.bottom).offset(10)
+            make.width.equalTo(kScreenWitdh-20-20-10)
+        }
+        
+        areaLab.snp.makeConstraints { (make) in
+            make.top.equalTo(contentLab.snp.bottom).offset(10)
+            make.left.equalTo(nickNameLab.snp.left)
+            make.width.equalTo(kScreenWitdh-20-90)
+            make.height.equalTo(10)
+        }
+        
+        
     }
     
     func setValueForCell(model:LNCommentModel){

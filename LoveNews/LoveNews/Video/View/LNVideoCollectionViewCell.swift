@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Masonry
+import SnapKit
 
 class LNVideoCollectionViewCell: UICollectionViewCell {
     
@@ -47,25 +47,26 @@ class LNVideoCollectionViewCell: UICollectionViewCell {
     
     func makeConstraints() {
         
-        contentImg.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(5)
-            make.top.equalTo()(self.mas_top)?.offset()(0)
-            make.width.mas_equalTo()(kScreenWitdh/2-5*2)
-            make.height.mas_equalTo()(120)
-        })
+        contentImg.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(5)
+            make.top.equalTo(self.snp.top)
+            make.width.equalTo(kScreenWitdh/2-5*2)
+            make.height.equalTo(120)
+        }
         
-        tilteLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(5)
-            make.top.equalTo()(contentImg.mas_bottom)?.offset()(10)
-            make.width.mas_equalTo()(kScreenWitdh/2-5)
-        })
+        tilteLab.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(5)
+            make.top.equalTo(contentImg.snp.bottom).offset(10)
+            make.width.equalTo(kScreenWitdh/2-5)
+        }
         
-        statisticLab.mas_makeConstraints({ (make : MASConstraintMaker!) in
-            make.left.equalTo()(self.mas_left)?.offset()(5)
-            make.bottom.equalTo()(self.mas_bottom)?.offset()(-5)
-            make.width.mas_equalTo()(kScreenWitdh/2-5)
-            make.height.mas_equalTo()(12)
-        })
+        statisticLab.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(5)
+            make.bottom.equalTo(self.snp.bottom).offset(-5)
+            make.width.equalTo(kScreenWitdh/2-5)
+            make.height.equalTo(12)
+        }
+        
     }
     
     
