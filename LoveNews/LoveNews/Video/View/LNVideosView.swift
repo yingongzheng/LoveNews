@@ -19,7 +19,7 @@ class LNVideosView: UIView {
     }()
     
     lazy var scrollview:UIScrollView = {
-        let tempScrollview = UIScrollView(frame: CGRect(x:10, y:5+sepView.bottom, width:kScreenWitdh-10, height: 180))
+        let tempScrollview = UIScrollView(frame: CGRect(x:10, y:5+sepView.bottom, width:kScreenWitdh-10, height: 130))
         tempScrollview.showsHorizontalScrollIndicator = false
         return tempScrollview
     }()
@@ -31,6 +31,7 @@ class LNVideosView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
+        self.isUserInteractionEnabled = true
         self.addSubview(sepView)
         self.addSubview(scrollview)
     }
@@ -41,7 +42,7 @@ class LNVideosView: UIView {
         let distance:CGFloat = 10
         let itemViewWidth:CGFloat = (scrollViewWidth - distance*2)/(7/3)
             for i in 0..<datas.count {
-                let itemView = LNVideosItemView(frame: CGRect(x: CGFloat (i)*itemViewWidth+distance*CGFloat(i),y: 0, width:itemViewWidth, height:180))
+                let itemView = LNVideosItemView(frame: CGRect(x: CGFloat (i)*itemViewWidth+distance*CGFloat(i),y: 0, width:itemViewWidth, height:130))
                 let videoModel  = datas[i]
                 itemView.refreshForView(videoModel: videoModel)
                 scrollview.addSubview(itemView)

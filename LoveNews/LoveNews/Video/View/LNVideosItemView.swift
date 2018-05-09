@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-
-class LNVideosItemView: UIView {
+class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
+    
     
     lazy var videoImg:UIImageView  = {
         let videoImg = UIImageView()
@@ -27,6 +27,13 @@ class LNVideosItemView: UIView {
         return videoTitleLab
     }()
     
+    lazy var button:UIButton = {
+        let button:UIButton = UIButton(type:.custom)
+        button.addTarget(self, action:#selector(clicked), for:.touchUpInside)
+//        button.backgroundColor = UIColor.red
+        return button
+    }()
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -36,19 +43,25 @@ class LNVideosItemView: UIView {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
         self.isUserInteractionEnabled = true
-        
         self.addSubview(videoImg)
         self.addSubview(videoTitleLab)
+        self.addSubview(button)
         makeConstraints()
         
     }
     
+    @objc func clicked(){
+        print("tapped")
+    }
+    
+
     func refreshForView(videoModel:LNVideoItmeModel ) {
         
         videoImg.af_setImage(withURL: URL(string: videoModel.img!)!)
         videoTitleLab.text = videoModel.title
         
     }
+    
     
     func makeConstraints() {
         
@@ -58,7 +71,7 @@ class LNVideosItemView: UIView {
         
         videoImg.snp.makeConstraints { (make) in
             make.top.equalTo(self.snp.top).offset(5)
-            make.left.equalTo(self.snp.left).offset(5)
+            make.left.equalTo(self.snp.left).offset(0)
             make.width.equalTo(imageWidth)
             make.height.equalTo(100)
         }
@@ -69,6 +82,14 @@ class LNVideosItemView: UIView {
             make.width.equalTo(130)
             make.height.equalTo(12)
         }
+        
+        button.snp.makeConstraints { (make) in
+            make.top.equalTo(self.snp.top)
+            make.left.equalTo(self.snp.left)
+            make.width.equalTo(self)
+            make.height.equalTo(self)
+        }
+        
         
     }
     
