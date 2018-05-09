@@ -23,16 +23,16 @@ class LNVideoViewController: UIViewController,UICollectionViewDataSource,UIColle
         //设置单元格宽度和高度
          layout.itemSize = CGSize(width:kScreenWitdh/2, height:185)
          collectionView.register(LNVideoCollectionViewCell.self, forCellWithReuseIdentifier:"LNVideoCollectionViewCell")
+         collectionView.backgroundColor = UIColor.white
           return collectionView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        self.view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = UIColor.white
-        self.view.addSubview(collectionView)
         
         collectionView.es.addPullToRefresh {
             [weak self] in
