@@ -70,10 +70,9 @@ class LNHomeViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let indentifier = "HomeListCell"
-        var cell:HomeListCell! = tableView.dequeueReusableCell(withIdentifier: indentifier)as?HomeListCell
+        var cell:HomeListCell! = tableView.dequeueReusableCell(withIdentifier: CellIdentifierClass)as?HomeListCell
         if cell == nil {
-         cell =  HomeListCell(style: .default, reuseIdentifier: indentifier)
+         cell =  HomeListCell(style: .default, reuseIdentifier: CellIdentifierClass)
         }
         cell.setValueForCell(model: dataArr[indexPath.row])
         return cell

@@ -88,8 +88,8 @@ class LNVideoViewController: UIViewController,UICollectionViewDataSource,UIColle
         print("click \(row)")
         
         let detailVC = LVVideoDetailController()
-//        let movieModel = dataArr[indexPath.row]
-//        detailVC.passMovieModel  = movieModel
+        let videoModel:LNItemModel = dataArr[indexPath.row]
+        detailVC.liveId = videoModel.liveId
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 

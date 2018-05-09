@@ -23,6 +23,10 @@
 		BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BA5209BFFCD00620154 /* LNActorsItemView.swift */; };
 		BF443BAB209C471700620154 /* LNStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BAA209C471700620154 /* LNStoryView.swift */; };
 		BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF443BAD209C4C7300620154 /* LNCommentCell.swift */; };
+		BF76FF9F20A2CED00088BA88 /* LNVideoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FF9E20A2CED00088BA88 /* LNVideoDetailCell.swift */; };
+		BF76FFA120A2D3D90088BA88 /* LNVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA020A2D3D90088BA88 /* LNVideosView.swift */; };
+		BF76FFA320A2D40A0088BA88 /* LNVideosItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA220A2D40A0088BA88 /* LNVideosItemView.swift */; };
+		BF76FFA620A2DBA10088BA88 /* LNSepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA520A2DBA10088BA88 /* LNSepView.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -86,6 +90,10 @@
 		BF443BA5209BFFCD00620154 /* LNActorsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNActorsItemView.swift; sourceTree = "<group>"; };
 		BF443BAA209C471700620154 /* LNStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNStoryView.swift; sourceTree = "<group>"; };
 		BF443BAD209C4C7300620154 /* LNCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNCommentCell.swift; sourceTree = "<group>"; };
+		BF76FF9E20A2CED00088BA88 /* LNVideoDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoDetailCell.swift; sourceTree = "<group>"; };
+		BF76FFA020A2D3D90088BA88 /* LNVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideosView.swift; sourceTree = "<group>"; };
+		BF76FFA220A2D40A0088BA88 /* LNVideosItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideosItemView.swift; sourceTree = "<group>"; };
+		BF76FFA520A2DBA10088BA88 /* LNSepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNSepView.swift; sourceTree = "<group>"; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -167,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				BF1682FC209FEF4A00767563 /* LNVideoCollectionViewCell.swift */,
+				BF76FF9E20A2CED00088BA88 /* LNVideoDetailCell.swift */,
+				BF76FFA020A2D3D90088BA88 /* LNVideosView.swift */,
+				BF76FFA220A2D40A0088BA88 /* LNVideosItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,13 +199,6 @@
 				BF16830220A02EB700767563 /* LVVideoDetailController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		BF16830820A0405400767563 /* VideoPlay */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VideoPlay;
 			sourceTree = "<group>";
 		};
 		BF1E99AC209ADC6C0070A620 /* Base */ = {
@@ -229,10 +233,18 @@
 			path = CommentCell;
 			sourceTree = "<group>";
 		};
+		BF76FFA420A2DB7D0088BA88 /* SepView */ = {
+			isa = PBXGroup;
+			children = (
+				BF76FFA520A2DBA10088BA88 /* LNSepView.swift */,
+			);
+			path = SepView;
+			sourceTree = "<group>";
+		};
 		BF9F49B2209415460001F43D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BF16830820A0405400767563 /* VideoPlay */,
+				BF76FFA420A2DB7D0088BA88 /* SepView */,
 				BF9F49B9209422B40001F43D /* PullToRefresh */,
 				BF9F49B4209415670001F43D /* Define */,
 				BF9F49B3209415520001F43D /* Categories */,
@@ -623,13 +635,16 @@
 				BF1E99B5209B177B0070A620 /* String+Category.swift in Sources */,
 				BFCE1442208DBCCA003FEB5E /* HotPlayModel.swift in Sources */,
 				BF443BAB209C471700620154 /* LNStoryView.swift in Sources */,
+				BF76FFA320A2D40A0088BA88 /* LNVideosItemView.swift in Sources */,
 				BF16830520A02F9B00767563 /* LNVideoCommentDetailModel.swift in Sources */,
 				BF16830720A0331A00767563 /* LNVideoDetailModel.swift in Sources */,
 				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
 				BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */,
+				BF76FFA120A2D3D90088BA88 /* LNVideosView.swift in Sources */,
 				BF443BA6209BFFCD00620154 /* LNActorsItemView.swift in Sources */,
 				BFAA1AA22085CCDC00B088B3 /* ViewController.swift in Sources */,
 				BF16830020A0217500767563 /* LNVideoListDetailModel.swift in Sources */,
+				BF76FFA620A2DBA10088BA88 /* LNSepView.swift in Sources */,
 				BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */,
 				BF9F49C8209424150001F43D /* ESRefreshAnimator.swift in Sources */,
 				BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */,
@@ -654,6 +669,7 @@
 				BF9F49D120945D280001F43D /* LNVideoViewController.swift in Sources */,
 				BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */,
 				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
+				BF76FF9F20A2CED00088BA88 /* LNVideoDetailCell.swift in Sources */,
 				BF1682FD209FEF4A00767563 /* LNVideoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,7 +843,10 @@
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoveNews/Common/Define/LoveNews-Bridging-Header.h";
@@ -849,7 +868,10 @@
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ygz.LoveNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoveNews/Common/Define/LoveNews-Bridging-Header.h";
@@ -866,7 +888,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -883,7 +909,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -899,7 +929,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -915,7 +949,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8M2Y8YPCJ;
 				INFOPLIST_FILE = LoveNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LoveNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
