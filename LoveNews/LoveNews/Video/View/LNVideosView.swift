@@ -9,17 +9,23 @@
 import Foundation
 import UIKit
 
-
-class LNVideosView: UIView {
+protocol LNVideosViewDelegate:NSObjectProtocol
+{
     
+    func passModel(model:LNVideoItmeModel)
+}
 
+class LNVideosView: UIView,LNVideosItemViewDelegate {
+    
+//    var videoModel:LNVideoItmeModel?
+    weak var delegate:LNVideosViewDelegate?
     lazy var sepView:LNSepView = {
         let sepView = LNSepView(frame: CGRect(x:0, y:5, width:kScreenWitdh-10, height: 30))
         return sepView
     }()
     
     lazy var scrollview:UIScrollView = {
-        let tempScrollview = UIScrollView(frame: CGRect(x:10, y:5+sepView.bottom, width:kScreenWitdh-10, height: 130))
+        let tempScrollview = UIScrollView(frame: CGRect(x:10, y:5+sepView.bottom, width:kScreenWitdh-10, height: 150))
         tempScrollview.showsHorizontalScrollIndicator = false
         return tempScrollview
     }()
@@ -42,8 +48,9 @@ class LNVideosView: UIView {
         let distance:CGFloat = 10
         let itemViewWidth:CGFloat = (scrollViewWidth - distance*2)/(7/3)
             for i in 0..<datas.count {
-                let itemView = LNVideosItemView(frame: CGRect(x: CGFloat (i)*itemViewWidth+distance*CGFloat(i),y: 0, width:itemViewWidth, height:130))
+                let itemView = LNVideosItemView(frame: CGRect(x: CGFloat (i)*itemViewWidth+distance*CGFloat(i),y: 0, width:itemViewWidth, height:150))
                 let videoModel  = datas[i]
+                itemView.delegate = self
                 itemView.refreshForView(videoModel: videoModel)
                 scrollview.addSubview(itemView)
             }
@@ -51,6 +58,13 @@ class LNVideosView: UIView {
             scrollview.contentSize = CGSize(width:(itemViewWidth+10)*CGFloat(datas.count), height: scrollview.height)
         let title:String = String(format: "%@(%d)","相关视频",datas.count)
         sepView.refreshForView(titleValue:title )
+    }
+    
+    //接收传过来的值
+    func clickVideo(model:LNVideoItmeModel) {
+        if delegate != nil {
+            delegate?.passModel(model:model)
+        }
     }
     
 

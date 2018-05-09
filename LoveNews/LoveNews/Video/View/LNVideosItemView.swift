@@ -10,9 +10,18 @@ import Foundation
 import UIKit
 import SnapKit
 
+
+protocol LNVideosItemViewDelegate:NSObjectProtocol
+{
+
+    func clickVideo(model:LNVideoItmeModel)
+}
+
+
 class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
     
-    
+    weak var delegate:LNVideosItemViewDelegate?
+    var videoModel:LNVideoItmeModel?
     lazy var videoImg:UIImageView  = {
         let videoImg = UIImageView()
         return videoImg
@@ -21,8 +30,10 @@ class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
     
     lazy var videoTitleLab:UILabel  = {
         let videoTitleLab = UILabel()
-        videoTitleLab.font = UIFont.boldSystemFont(ofSize: 12)
+        videoTitleLab.font = UIFont.boldSystemFont(ofSize: 14)
         videoTitleLab.textAlignment = NSTextAlignment.center
+        videoTitleLab.numberOfLines = 2
+        videoTitleLab.lineBreakMode = NSLineBreakMode.byTruncatingTail
         videoTitleLab.textColor = UIColor(0x4c4c4c)
         return videoTitleLab
     }()
@@ -30,7 +41,6 @@ class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
     lazy var button:UIButton = {
         let button:UIButton = UIButton(type:.custom)
         button.addTarget(self, action:#selector(clicked), for:.touchUpInside)
-//        button.backgroundColor = UIColor.red
         return button
     }()
     
@@ -51,12 +61,15 @@ class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
     }
     
     @objc func clicked(){
-        print("tapped")
+        //调用代理方法
+        if delegate != nil {
+            delegate?.clickVideo(model: self.videoModel!)
+        }
     }
     
 
     func refreshForView(videoModel:LNVideoItmeModel ) {
-        
+        self.videoModel = videoModel
         videoImg.af_setImage(withURL: URL(string: videoModel.img!)!)
         videoTitleLab.text = videoModel.title
         
@@ -79,8 +92,7 @@ class LNVideosItemView: UIView,UIGestureRecognizerDelegate {
         videoTitleLab.snp.makeConstraints { (make) in
             make.top.equalTo(videoImg.snp.bottom).offset(5)
             make.left.equalTo(videoImg.snp.left)
-            make.width.equalTo(130)
-            make.height.equalTo(12)
+            make.width.equalTo(imageWidth)
         }
         
         button.snp.makeConstraints { (make) in

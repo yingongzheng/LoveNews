@@ -13,7 +13,8 @@ import VGPlayer
 import SnapKit
 
 
-class LVVideoDetailController :LNBaseViewController,UITableViewDelegate,UITableViewDataSource{
+class LVVideoDetailController :LNBaseViewController,UITableViewDelegate,UITableViewDataSource
+                                ,LNVideosViewDelegate{
    
 
     var player = VGPlayer()
@@ -48,18 +49,28 @@ class LVVideoDetailController :LNBaseViewController,UITableViewDelegate,UITableV
     
     func initPlayer () {
         
-        let url = URL(string: "https://vfx.mtime.cn/Video/2018/04/24/mp4/180424224506970938_480.mp4")!
-        self.player.replaceVideo(url)
         view.addSubview(self.player.displayView)
         
         self.player.delegate = self
         self.player.displayView.delegate = self
-        self.player.displayView.titleLabel.text = "China NO.1"
        
         self.view.addSubview(videosView)
 //        self.view.addSubview(table)
+        videosView.delegate = self
         makeConstraints()
         getVideoDetail()
+    }
+    
+    func passModel(model:LNVideoItmeModel) {
+        self.playVideo(model)
+    }
+    
+    func playVideo(_ model:LNVideoItmeModel)  {
+        
+        let url = URL(string: model.url!)!
+        self.player.replaceVideo(url)
+        self.player.displayView.titleLabel.text = model.title
+        self.player.play()
     }
     
     
@@ -104,20 +115,23 @@ class LVVideoDetailController :LNBaseViewController,UITableViewDelegate,UITableV
             hud.mode = MBProgressHUDMode.determinate;
             MBProgressHUD .hide(for: self.view, animated: true)
 //            self.table.reloadData()
-            self.refreshData()
+            self.refreshData(self.dataArr)
 
         }
     }
     
     
-    func refreshData() {
-        
+    func refreshData(_ datas:Array<LNVideoItmeModel>) {
         //视频集
         videosView.refreshForView(datas:dataArr)
-    
-        
+       //默认播放第一个视频
+        if !datas.isEmpty {
+            let videoModel = datas[0]
+            self.playVideo(videoModel)
+        }
     }
     
+  
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count
@@ -146,8 +160,6 @@ class LVVideoDetailController :LNBaseViewController,UITableViewDelegate,UITableV
         
        
     }
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)

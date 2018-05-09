@@ -15,7 +15,7 @@ class LNSepView: UIView {
     
     lazy var titleLab:UILabel  = {
         let titleLab = UILabel()
-        titleLab.font = UIFont.boldSystemFont(ofSize: 12)
+        titleLab.font = UIFont.boldSystemFont(ofSize: 14)
         return titleLab
     }()
     
@@ -42,7 +42,7 @@ class LNSepView: UIView {
             make.centerY.equalTo(self)
             make.left.equalTo(self.snp.left).offset(10)
             make.width.equalTo(kScreenWitdh-10)
-            make.height.equalTo(12)
+            make.height.equalTo(14)
         }
         
     }
