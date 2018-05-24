@@ -18,6 +18,15 @@ protocol LNVideosViewDelegate:NSObjectProtocol
 class LNVideosView: UIView,LNVideosItemViewDelegate {
     
 //    var videoModel:LNVideoItmeModel?
+    var selItemIndex :Int = 0 {
+        
+        willSet {
+            print("selItemIndex 将设置新值 \(selItemIndex)")
+        }
+        didSet {
+            print("selItemIndex 已经设置新值 \(selItemIndex)")
+        }
+    }
     weak var delegate:LNVideosViewDelegate?
     lazy var sepView:LNSepView = {
         let sepView = LNSepView(frame: CGRect(x:0, y:5, width:kScreenWitdh-10, height: 30))

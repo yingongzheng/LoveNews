@@ -14,7 +14,6 @@
 		BF16830320A02EB700767563 /* LVVideoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF16830220A02EB700767563 /* LVVideoDetailController.swift */; };
 		BF16830520A02F9B00767563 /* LNVideoCommentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF16830420A02F9B00767563 /* LNVideoCommentDetailModel.swift */; };
 		BF16830720A0331A00767563 /* LNVideoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF16830620A0331A00767563 /* LNVideoDetailModel.swift */; };
-		BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */; };
 		BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */; };
 		BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */; };
 		BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */; };
@@ -27,6 +26,10 @@
 		BF76FFA120A2D3D90088BA88 /* LNVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA020A2D3D90088BA88 /* LNVideosView.swift */; };
 		BF76FFA320A2D40A0088BA88 /* LNVideosItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA220A2D40A0088BA88 /* LNVideosItemView.swift */; };
 		BF76FFA620A2DBA10088BA88 /* LNSepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF76FFA520A2DBA10088BA88 /* LNSepView.swift */; };
+		BF9AEFA620B65A52004D1A5C /* LNMallListDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AEFA520B65A52004D1A5C /* LNMallListDetailModel.swift */; };
+		BF9AEFA920B65D06004D1A5C /* LNMallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AEFA820B65D06004D1A5C /* LNMallCollectionViewCell.swift */; };
+		BF9AEFAD20B65EF9004D1A5C /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AEFAB20B65EF9004D1A5C /* LNHomeViewController.swift */; };
+		BF9AEFAE20B65EF9004D1A5C /* LNHomeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AEFAC20B65EF9004D1A5C /* LNHomeDetailController.swift */; };
 		BF9F49B6209415C80001F43D /* DRCGlobalDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */; };
 		BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49B7209417BA0001F43D /* UIColor+Category.swift */; };
 		BF9F49C4209424150001F43D /* ES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F49BA209424140001F43D /* ES.swift */; };
@@ -51,7 +54,6 @@
 		BFAA1AD82085D4C500B088B3 /* LNPersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */; };
 		BFCE143F208DBC4B003FEB5E /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */; };
 		BFCE1442208DBCCA003FEB5E /* HotPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */; };
-		BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 		BF16830220A02EB700767563 /* LVVideoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVVideoDetailController.swift; sourceTree = "<group>"; };
 		BF16830420A02F9B00767563 /* LNVideoCommentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoCommentDetailModel.swift; sourceTree = "<group>"; };
 		BF16830620A0331A00767563 /* LNVideoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideoDetailModel.swift; sourceTree = "<group>"; };
-		BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailController.swift; sourceTree = "<group>"; };
 		BF1E99AD209ADC820070A620 /* LNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNBaseViewController.swift; sourceTree = "<group>"; };
 		BF1E99AF209AE3260070A620 /* LNHomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNHomeDetailModel.swift; sourceTree = "<group>"; };
 		BF1E99B2209AFAB40070A620 /* LNMovieItroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMovieItroduceView.swift; sourceTree = "<group>"; };
@@ -94,6 +95,10 @@
 		BF76FFA020A2D3D90088BA88 /* LNVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideosView.swift; sourceTree = "<group>"; };
 		BF76FFA220A2D40A0088BA88 /* LNVideosItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNVideosItemView.swift; sourceTree = "<group>"; };
 		BF76FFA520A2DBA10088BA88 /* LNSepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNSepView.swift; sourceTree = "<group>"; };
+		BF9AEFA520B65A52004D1A5C /* LNMallListDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMallListDetailModel.swift; sourceTree = "<group>"; };
+		BF9AEFA820B65D06004D1A5C /* LNMallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNMallCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF9AEFAB20B65EF9004D1A5C /* LNHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LNHomeViewController.swift; path = LoveNews/Homepage/Controller/LNHomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		BF9AEFAC20B65EF9004D1A5C /* LNHomeDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LNHomeDetailController.swift; path = LoveNews/Homepage/Controller/LNHomeDetailController.swift; sourceTree = SOURCE_ROOT; };
 		BF9F49B5209415C80001F43D /* DRCGlobalDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRCGlobalDefine.swift; sourceTree = "<group>"; };
 		BF9F49B7209417BA0001F43D /* UIColor+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		BF9F49BA209424140001F43D /* ES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ES.swift; sourceTree = "<group>"; };
@@ -124,7 +129,6 @@
 		BFAA1AD72085D4C500B088B3 /* LNPersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNPersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFCE143E208DBC4B003FEB5E /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		BFCE1441208DBCCA003FEB5E /* HotPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlayModel.swift; sourceTree = "<group>"; };
-		BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNHomeViewController.swift; sourceTree = "<group>"; };
 		EDF3A2260EB8908D2915F994 /* Pods-LoveNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveNews/Pods-LoveNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +243,30 @@
 				BF76FFA520A2DBA10088BA88 /* LNSepView.swift */,
 			);
 			path = SepView;
+			sourceTree = "<group>";
+		};
+		BF9AEFA420B65A2A004D1A5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF9AEFA520B65A52004D1A5C /* LNMallListDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF9AEFA720B65CF9004D1A5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF9AEFA820B65D06004D1A5C /* LNMallCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF9AEFAA20B65D3F004D1A5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BF9F49B2209415460001F43D /* Common */ = {
@@ -402,7 +430,9 @@
 		BFAA1AD42085D43A00B088B3 /* Mall */ = {
 			isa = PBXGroup;
 			children = (
-				BFAA1AD52085D4A600B088B3 /* LNMallViewController.swift */,
+				BF9AEFAA20B65D3F004D1A5C /* Controller */,
+				BF9AEFA720B65CF9004D1A5C /* View */,
+				BF9AEFA420B65A2A004D1A5C /* Model */,
 			);
 			path = Mall;
 			sourceTree = "<group>";
@@ -440,10 +470,11 @@
 		BFCE144A208F00D3003FEB5E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BFCE144B208F00D3003FEB5E /* LNHomeViewController.swift */,
-				BF1E99A9209AA6980070A620 /* LNHomeDetailController.swift */,
+				BF9AEFAB20B65EF9004D1A5C /* LNHomeViewController.swift */,
+				BF9AEFAC20B65EF9004D1A5C /* LNHomeDetailController.swift */,
 			);
-			path = Controller;
+			name = Controller;
+			path = View/CommentCell/Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,6 +668,7 @@
 				BF443BAB209C471700620154 /* LNStoryView.swift in Sources */,
 				BF76FFA320A2D40A0088BA88 /* LNVideosItemView.swift in Sources */,
 				BF16830520A02F9B00767563 /* LNVideoCommentDetailModel.swift in Sources */,
+				BF9AEFA920B65D06004D1A5C /* LNMallCollectionViewCell.swift in Sources */,
 				BF16830720A0331A00767563 /* LNVideoDetailModel.swift in Sources */,
 				BFAA1AD62085D4A600B088B3 /* LNMallViewController.swift in Sources */,
 				BF443BAE209C4C7300620154 /* LNCommentCell.swift in Sources */,
@@ -657,10 +689,9 @@
 				BF443BA4209BFAD900620154 /* UIView +Category.swift in Sources */,
 				BF1E99B0209AE3260070A620 /* LNHomeDetailModel.swift in Sources */,
 				BF9F49B8209417BA0001F43D /* UIColor+Category.swift in Sources */,
+				BF9AEFAE20B65EF9004D1A5C /* LNHomeDetailController.swift in Sources */,
 				BF1682F0209C551600767563 /* LNHotCommentModel.swift in Sources */,
 				BFAA1AA02085CCDC00B088B3 /* AppDelegate.swift in Sources */,
-				BF1E99AA209AA6980070A620 /* LNHomeDetailController.swift in Sources */,
-				BFCE144C208F00D3003FEB5E /* LNHomeViewController.swift in Sources */,
 				BF9F49CB209424150001F43D /* ESRefreshFooterAnimator.swift in Sources */,
 				BF1E99AE209ADC820070A620 /* LNBaseViewController.swift in Sources */,
 				BF9F49C7209424150001F43D /* ESRefreshComponent.swift in Sources */,
@@ -670,7 +701,9 @@
 				BF1E99B3209AFAB40070A620 /* LNMovieItroduceView.swift in Sources */,
 				BF9F49CC209424150001F43D /* ESPullToRefresh+Manager.swift in Sources */,
 				BF76FF9F20A2CED00088BA88 /* LNVideoDetailCell.swift in Sources */,
+				BF9AEFA620B65A52004D1A5C /* LNMallListDetailModel.swift in Sources */,
 				BF1682FD209FEF4A00767563 /* LNVideoCollectionViewCell.swift in Sources */,
+				BF9AEFAD20B65EF9004D1A5C /* LNHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
