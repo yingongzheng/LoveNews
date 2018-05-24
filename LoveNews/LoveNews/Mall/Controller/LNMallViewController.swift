@@ -17,6 +17,7 @@ class LNMallViewController: UIViewController,UICollectionViewDataSource,UICollec
 
     var dataArr:Array<LNMallItemModel> = []
     let identifier = "LNMallCollectionViewCell"
+    var curPage = 1
     lazy var collectionView :UICollectionView  = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: CGRect(x: 10, y:64+10, width:kScreenWitdh-10*2, height: kScreenHeight-64-10), collectionViewLayout: layout)
@@ -39,19 +40,36 @@ class LNMallViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         collectionView.es.addPullToRefresh {
             [weak self] in
-            self?.getData()
-            self?.collectionView.es.stopPullToRefresh(ignoreDate: true)
+            self?.curPage = 1
+            self?.getData(page:(self?.curPage)!)
+            self?.collectionView.es.stopPullToRefresh()
+        }
+        
+        collectionView.es.addInfiniteScrolling {
+            [weak self] in
+            self?.getData(page:(self?.curPage)!)
+
         }
         collectionView.es.startPullToRefresh()
         
     }
     
-    func getData() {
+    func getData(page:Int) {
         
+        let requestUrl:String = String(format: "%@%d",KMallUrl,curPage)
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        Alamofire.request(KMallUrl).responseObject { (response: DataResponse<LNMallListDetailModel>) in
+        Alamofire.request(requestUrl).responseObject { (response: DataResponse<LNMallListDetailModel>) in
             let responseValue = response.result.value
-            self.dataArr.removeAll()
+            let pages = ((responseValue?.count)!-1)/(responseValue?.pageCount)!+1
+            if(self.curPage == 1){
+                self.dataArr.removeAll()
+            }
+            if(self.curPage == pages){
+               self.collectionView.es.noticeNoMoreData()
+            }else {
+              self.collectionView.es.stopLoadingMore()
+            }
+            self.curPage = (self.curPage) + 1
             //回放
             if let Arr = responseValue?.goodsList {
                 for item in Arr {
@@ -78,24 +96,9 @@ class LNMallViewController: UIViewController,UICollectionViewDataSource,UICollec
     //自定义cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! LNMallCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.identifier, for: indexPath) as! LNMallCollectionViewCell
         cell.setValueForCell(model: dataArr[indexPath.row])
         
         return cell
     }
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let row = indexPath.row
-//        print("click \(row)")
-//
-//        let detailVC = LVVideoDetailController()
-//        let videoModel:LNItemModel = dataArr[indexPath.row]
-//        detailVC.liveId = videoModel.liveId
-//        self.navigationController?.pushViewController(detailVC, animated: true)
-//    }
-
-   
-
-
 }

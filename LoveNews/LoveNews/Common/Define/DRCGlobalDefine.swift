@@ -22,7 +22,7 @@ let kHhomeUrl = "https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=2
 let KHomeDetailUrl = "https://ticket-api-m.mtime.cn/movie/detail.api?locationId=290&movieId="
 let KHotCommentUrl = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?movieId="
 let KLiveUrl = "https://live-api-m.mtime.cn/live_room/getLiveList"
-let KMallUrl = "https://api-m.mtime.cn/ECommerce/RecommendProducts.api?goodsIds=102443%2C103465%2C103309&pageIndex=1"
+let KMallUrl = "https://api-m.mtime.cn/ECommerce/RecommendProducts.api?goodsIds=102443%2C103465%2C103309&pageIndex="
 
 
 //https://live-api-m.mtime.cn/live/detail?clientId=iOS_25df2c6a3aed4b73a58a7c03689d5780_580&liveId=757&locationId=290
